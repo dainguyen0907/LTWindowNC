@@ -1,0 +1,13 @@
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\PhanMemQuanLiVanBan.exe.config
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.frm_DangNhap.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.frm_KetNoiDatabase.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.frm_Main.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.Properties.Resources.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.csproj.GenerateResource.Cache
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\PhanMemQuanLiVanBan.exe
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\PhanMemQuanLiVanBan.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\MyTools.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\MyTools.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.exe
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.csprojResolveAssemblyReference.cache
