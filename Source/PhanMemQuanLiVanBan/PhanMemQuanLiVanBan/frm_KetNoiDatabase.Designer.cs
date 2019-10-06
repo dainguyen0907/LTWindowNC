@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_KetNoiDatabase));
             this.connectDatabase1 = new MyTools.ConnectDatabase();
             this.SuspendLayout();
             // 
             // connectDatabase1
             // 
-            this.connectDatabase1.Location = new System.Drawing.Point(12, -6);
+            this.connectDatabase1.Location = new System.Drawing.Point(2, -7);
             this.connectDatabase1.Name = "connectDatabase1";
             this.connectDatabase1.Size = new System.Drawing.Size(295, 327);
             this.connectDatabase1.TabIndex = 0;
@@ -47,6 +48,7 @@
             this.Controls.Add(this.connectDatabase1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_KetNoiDatabase";
@@ -61,6 +63,7 @@
         #endregion
 
         private MyTools.ConnectDatabase connectDatabase1;
+
 
     }
 }

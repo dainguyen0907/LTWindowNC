@@ -23,6 +23,7 @@ namespace PhanMemQuanLiVanBan
         {
             frm_KetNoiDatabase database = new frm_KetNoiDatabase();
             database.ShowDialog();
+            cbb_congty_DropDown(sender, e);
         }
         //=========================================================================
         private void cbb_congty_DropDown(object sender, EventArgs e)// Đổ dữ liệu vào combobox công ty
@@ -73,8 +74,9 @@ namespace PhanMemQuanLiVanBan
         //======================================================================================
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
-            if(Status==1 || Status==2)
-                MessageBox.Show("Kêt nối bị lỗi. Vui lòng thiết lập lại kết nối!","Thông báo",MessageBoxButtons.OK);
+            if (Status == 1 || Status == 2)
+                MessageBox.Show("Kêt nối bị lỗi. Vui lòng thiết lập lại kết nối!", "Thông báo", MessageBoxButtons.OK);
+            cbb_congty_DropDown(sender, e);
 
         }
         //===========================================================================================
@@ -84,6 +86,12 @@ namespace PhanMemQuanLiVanBan
                 MessageBox.Show("Kêt nối bị lỗi. Vui lòng thiết lập lại kết nối!", "Thông báo", MessageBoxButtons.OK);
             else
             {
+                if (string.IsNullOrEmpty(cbb_congty.Text))
+                {
+                    MessageBox.Show("Hãy chọn công ty", "Thông báo", MessageBoxButtons.OK);
+                    this.txt_taikhoan.Focus();
+                    return;
+                }
                 if(string.IsNullOrEmpty(txt_taikhoan.Text.Trim()))
                 {
                     MessageBox.Show("Tên đăng nhập không được bỏ trống!", "Thông báo", MessageBoxButtons.OK);
@@ -96,7 +104,7 @@ namespace PhanMemQuanLiVanBan
                     this.txt_taikhoan.Focus();
                     return;
                 }
-                if(string.IsNullOrEmpty(txt_taikhoan.Text.Trim()))
+                if(Status==0)
                 {
                     ProcessLogin();
                 }
@@ -105,8 +113,49 @@ namespace PhanMemQuanLiVanBan
         //==========================================================================================
         private void ProcessLogin()
         {
+            int result;
+            result = check_User(txt_taikhoan.Text, txt_matkhau.Text);
+            if (result == 0)
+            {
+                MessageBox.Show("Tài khoản hay mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK);
+                txt_matkhau.Text = "";
+                return;
+            }
+            else
+            {
+                if (Program.mainForm == null || Program.mainForm.IsDisposed)
+                {
+                    Program.mainForm = new frm_Main();
+                }
+                this.Hide();
+                Program.mainForm.Show();
+                
+            }
         }
+        //=============================================================================================
+        private int check_User(string user, string pass)//Kiểm tra tài khoản
+        {
+            if (Status == 0)
+            {
+                DataTable dt = new DataTable();
+                try
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SALE_NHAN_VIEN WHERE MA_NHAN_VIEN='" + txt_taikhoan.Text + "' and MAT_KHAU = '" + txt_matkhau.Text + "'", PhanMemQuanLiVanBan.Properties.Settings.Default.Connect);
+                    da.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                    {
+                        Program.Tennhanvien = dt.Rows[0][2].ToString();
+                        return 1;// Hợp lệ
+                    }
+                }
+                catch
+                {
+                    return 0;// Không tồn tại
+                }
 
+            }
+            return 0;// không tồn tại
+        }
         
     }
 }

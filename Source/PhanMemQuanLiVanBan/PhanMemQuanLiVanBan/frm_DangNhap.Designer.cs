@@ -32,11 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_taikhoan = new System.Windows.Forms.TextBox();
-            this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.cbb_congty = new System.Windows.Forms.ComboBox();
             this.btn_dangnhap = new System.Windows.Forms.Button();
             this.btn_ketnoi = new System.Windows.Forms.Button();
+            this.txt_taikhoan = new MyTools.TextBox20Char();
+            this.txt_matkhau = new MyTools.TextBox20Char();
             this.SuspendLayout();
             // 
             // label1
@@ -69,25 +69,10 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             // 
-            // txt_taikhoan
-            // 
-            this.txt_taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taikhoan.Location = new System.Drawing.Point(116, 45);
-            this.txt_taikhoan.Name = "txt_taikhoan";
-            this.txt_taikhoan.Size = new System.Drawing.Size(191, 26);
-            this.txt_taikhoan.TabIndex = 3;
-            // 
-            // txt_matkhau
-            // 
-            this.txt_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_matkhau.Location = new System.Drawing.Point(116, 77);
-            this.txt_matkhau.Name = "txt_matkhau";
-            this.txt_matkhau.PasswordChar = '*';
-            this.txt_matkhau.Size = new System.Drawing.Size(191, 26);
-            this.txt_matkhau.TabIndex = 4;
-            // 
             // cbb_congty
             // 
+            this.cbb_congty.BackColor = System.Drawing.SystemColors.Window;
+            this.cbb_congty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_congty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_congty.FormattingEnabled = true;
             this.cbb_congty.Location = new System.Drawing.Point(116, 12);
@@ -119,17 +104,35 @@
             this.btn_ketnoi.UseVisualStyleBackColor = false;
             this.btn_ketnoi.Click += new System.EventHandler(this.btn_ketnoi_Click);
             // 
+            // txt_taikhoan
+            // 
+            this.txt_taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taikhoan.Location = new System.Drawing.Point(116, 45);
+            this.txt_taikhoan.Name = "txt_taikhoan";
+            this.txt_taikhoan.Size = new System.Drawing.Size(191, 26);
+            this.txt_taikhoan.TabIndex = 8;
+            // 
+            // txt_matkhau
+            // 
+            this.txt_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_matkhau.Location = new System.Drawing.Point(116, 77);
+            this.txt_matkhau.Name = "txt_matkhau";
+            this.txt_matkhau.PasswordChar = '*';
+            this.txt_matkhau.Size = new System.Drawing.Size(191, 26);
+            this.txt_matkhau.TabIndex = 9;
+            // 
             // frm_DangNhap
             // 
+            this.AcceptButton = this.btn_dangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(354, 167);
+            this.Controls.Add(this.txt_matkhau);
+            this.Controls.Add(this.txt_taikhoan);
             this.Controls.Add(this.btn_ketnoi);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.cbb_congty);
-            this.Controls.Add(this.txt_matkhau);
-            this.Controls.Add(this.txt_taikhoan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -152,10 +155,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_taikhoan;
-        private System.Windows.Forms.TextBox txt_matkhau;
         private System.Windows.Forms.ComboBox cbb_congty;
         private System.Windows.Forms.Button btn_dangnhap;
         private System.Windows.Forms.Button btn_ketnoi;
+        private MyTools.TextBox20Char txt_taikhoan;
+        private MyTools.TextBox20Char txt_matkhau;
     }
 }

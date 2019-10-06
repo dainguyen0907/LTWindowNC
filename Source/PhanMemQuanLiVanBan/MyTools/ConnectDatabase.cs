@@ -30,6 +30,8 @@ namespace MyTools
             foreach (DataRow d in dt.Rows)
                 foreach (DataColumn c in dt.Columns)
                     cbb_server.Items.Add(d[c]);
+            txt_user.Enabled = true;
+            txt_password.Enabled = true;
         }
 
 
@@ -50,7 +52,7 @@ namespace MyTools
         public string kq="";
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            if (cbb_server.Text != "" && txt_user.Text != "" && txt_password.Text != ""&& cbb_database.Text!="")
+            if (cbb_server.Text!="" && cbb_database.Text!=""   )
                 kq = "Data Source =" + cbb_server.Text + "; Initial Catalog= "+cbb_database.Text+"; User ID=" + txt_user.Text + ";pwd=" + txt_password.Text + "";
             if (this.parent != null)
                 parent.Close();
@@ -70,6 +72,8 @@ namespace MyTools
                 foreach (DataRow r in dt.Rows)
                     foreach (DataColumn d in dt.Columns)
                         cbb_database.Items.Add(r[d]);
+                txt_user.Enabled = false;
+                txt_password.Enabled = false;
 
             }
         }
@@ -94,6 +98,22 @@ namespace MyTools
                 return null;
             }
             return dt;
+        }
+
+        private void txt_user_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && txt_user.Text.Length > 20)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && txt_password.Text.Length > 20)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

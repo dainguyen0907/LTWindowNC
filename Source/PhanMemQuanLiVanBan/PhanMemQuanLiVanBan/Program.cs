@@ -11,8 +11,9 @@ namespace PhanMemQuanLiVanBan
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static frm_DangNhap dangnhap=null;
-        static frm_Main main = null;
+        static public frm_DangNhap dangnhap=null;
+        static public frm_Main mainForm = null;
+        static public string Tennhanvien;
         static void Main()
         {
             Application.EnableVisualStyles();
