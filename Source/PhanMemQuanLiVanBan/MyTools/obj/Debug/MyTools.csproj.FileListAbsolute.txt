@@ -1,0 +1,12 @@
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\MyTools\bin\Debug\MyTools.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\MyTools\bin\Debug\MyTools.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.ConnectDatabase.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.csproj.GenerateResource.Cache
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\MyTools.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\MyTools.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.ConnectDatabase.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.csproj.GenerateResource.Cache
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.pdb
