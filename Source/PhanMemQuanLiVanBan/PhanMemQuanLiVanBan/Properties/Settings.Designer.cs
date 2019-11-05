@@ -35,5 +35,16 @@ namespace PhanMemQuanLiVanBan.Properties {
                 this["Connect"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-96CRGKS\\SQLEXPRESS;Initial Catalog=QUAN_LY_VAN_BAN;User ID=sa" +
+            ";Password=sa2012")]
+        public string QUAN_LY_VAN_BANConnectionString {
+            get {
+                return ((string)(this["QUAN_LY_VAN_BANConnectionString"]));
+            }
+        }
     }
 }

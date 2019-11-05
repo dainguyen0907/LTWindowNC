@@ -31,7 +31,7 @@ namespace PhanMemQuanLiVanBan
             try
             {
                 DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter("select TEN_CONG_TY from THONG_TIN_CONG_TY", Properties.Settings.Default.Connect);
+                SqlDataAdapter da = new SqlDataAdapter("select ID_CONG_TY,TEN_CONG_TY from THONG_TIN_CONG_TY", Properties.Settings.Default.Connect);
                 da.Fill(dt);
                 if (dt.Rows.Count == 0)
                 {
@@ -39,11 +39,10 @@ namespace PhanMemQuanLiVanBan
                 }
                 else
                 {
-                    cbb_congty.Items.Clear();
-                    foreach (DataRow r in dt.Rows)
-                        foreach (DataColumn c in dt.Columns)
-                            cbb_congty.Items.Add(r[c]);
-                    cbb_congty.SelectedIndex = 0;
+                    cbb_congty.DataSource = null;
+                    cbb_congty.DataSource = dt;
+                    cbb_congty.DisplayMember = "TEN_CONG_TY";
+                    cbb_congty.ValueMember = "ID_CONG_TY";
                 }
                 
             }
@@ -121,15 +120,19 @@ namespace PhanMemQuanLiVanBan
                 txt_matkhau.Text = "";
                 return;
             }
+            else if (check_Enabale(txt_taikhoan.Text) == 0)
+            {
+                MessageBox.Show("Tài khoản đã bạ khóa!", "Thông báo", MessageBoxButtons.OK);
+                txt_matkhau.Text = "";
+                return;
+            }
             else
             {
-                if (Program.mainForm == null || Program.mainForm.IsDisposed)
-                {
-                    Program.mainForm = new frm_Main();
-                }
+                Program.id_congty = cbb_congty.SelectedValue.ToString();
+                Program.mainForm = new frm_Main();
                 this.Hide();
                 Program.mainForm.Show();
-                
+
             }
         }
         //=============================================================================================
@@ -155,6 +158,27 @@ namespace PhanMemQuanLiVanBan
 
             }
             return 0;// không tồn tại
+        }
+        //================================================================================================
+        private int check_Enabale(String user)
+        {
+            DataTable dt = new DataTable();
+                try
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SALE_NHAN_VIEN WHERE MA_NHAN_VIEN='" + txt_taikhoan.Text + "' and NGHI_VIEC = 1", PhanMemQuanLiVanBan.Properties.Settings.Default.Connect);
+                    da.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                    {
+                        Program.Tennhanvien = dt.Rows[0][2].ToString();
+                        return 0;// Hợp lệ
+                    }
+                }
+                catch
+                {
+                    return 1;
+                }
+                return 1;
+
         }
         
     }

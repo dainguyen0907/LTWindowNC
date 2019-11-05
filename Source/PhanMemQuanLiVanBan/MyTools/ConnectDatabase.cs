@@ -28,8 +28,16 @@ namespace MyTools
             DataTable dt = GetServerName();
             cbb_server.Items.Clear();
             foreach (DataRow d in dt.Rows)
-                foreach (DataColumn c in dt.Columns)
-                    cbb_server.Items.Add(d[c]);
+            {
+                String SQLServer = d["ServerName"].ToString();
+                String Instance = d["InstanceName"].ToString();
+                if (Instance != null && !String.IsNullOrEmpty(Instance))
+                {
+                    cbb_server.Items.Add(SQLServer + "\\" + Instance);
+                }
+                else
+                    cbb_server.Items.Add(SQLServer);
+            }
             txt_user.Enabled = true;
             txt_password.Enabled = true;
         }

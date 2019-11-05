@@ -7,6 +7,13 @@ C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Code\PhanMemQuanLiVanBan\MyTools\o
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\MyTools.dll
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\MyTools.pdb
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.ConnectDatabase.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.MyToolStrip.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.Properties.Resources.resources
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.csproj.GenerateResource.Cache
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.dll
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.csprojResolveAssemblyReference.cache
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\BLL.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\DAL.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\BLL.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\DAL.pdb

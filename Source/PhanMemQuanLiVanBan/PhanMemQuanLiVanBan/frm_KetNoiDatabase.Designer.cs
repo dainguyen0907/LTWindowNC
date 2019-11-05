@@ -34,9 +34,10 @@
             // 
             // connectDatabase1
             // 
-            this.connectDatabase1.Location = new System.Drawing.Point(2, -7);
+            this.connectDatabase1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.connectDatabase1.Location = new System.Drawing.Point(0, 0);
             this.connectDatabase1.Name = "connectDatabase1";
-            this.connectDatabase1.Size = new System.Drawing.Size(295, 327);
+            this.connectDatabase1.Size = new System.Drawing.Size(298, 322);
             this.connectDatabase1.TabIndex = 0;
             // 
             // frm_KetNoiDatabase
@@ -63,6 +64,7 @@
         #endregion
 
         private MyTools.ConnectDatabase connectDatabase1;
+
 
 
     }

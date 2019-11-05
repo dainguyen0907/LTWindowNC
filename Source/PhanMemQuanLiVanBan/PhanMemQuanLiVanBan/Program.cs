@@ -14,6 +14,7 @@ namespace PhanMemQuanLiVanBan
         static public frm_DangNhap dangnhap=null;
         static public frm_Main mainForm = null;
         static public string Tennhanvien;
+        static public string id_congty;
         static void Main()
         {
             Application.EnableVisualStyles();

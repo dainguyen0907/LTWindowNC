@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhanMemQuanLiVanBan", "Phan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTools", "MyTools\MyTools.csproj", "{79D38C0C-E942-42D8-B874-2AED06E1BAE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{5C3A9945-CE96-405E-B1DB-FD875DC4D1A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A1C2DA49-59EA-41C7-B42D-56340DA3DCCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{79D38C0C-E942-42D8-B874-2AED06E1BAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79D38C0C-E942-42D8-B874-2AED06E1BAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79D38C0C-E942-42D8-B874-2AED06E1BAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3A9945-CE96-405E-B1DB-FD875DC4D1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3A9945-CE96-405E-B1DB-FD875DC4D1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3A9945-CE96-405E-B1DB-FD875DC4D1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3A9945-CE96-405E-B1DB-FD875DC4D1A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C2DA49-59EA-41C7-B42D-56340DA3DCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C2DA49-59EA-41C7-B42D-56340DA3DCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C2DA49-59EA-41C7-B42D-56340DA3DCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C2DA49-59EA-41C7-B42D-56340DA3DCCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

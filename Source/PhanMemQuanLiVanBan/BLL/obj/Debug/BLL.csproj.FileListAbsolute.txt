@@ -1,0 +1,7 @@
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\BLL\bin\Debug\BLL.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\BLL\bin\Debug\BLL.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\BLL\bin\Debug\DAL.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\BLL\bin\Debug\DAL.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\BLL\obj\Debug\BLL.dll
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\BLL\obj\Debug\BLL.pdb
