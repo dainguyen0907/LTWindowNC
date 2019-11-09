@@ -36,7 +36,7 @@ namespace BLL
                 nhanvien.HO_TEN = TenNhanVien;
                 nhanvien.MAT_KHAU = MatKhau;
                 nhanvien.NGHI_VIEC = NghiViec;
-                return da.updateNhanVien();
+                return da.update();
             }
             else
                 return false;
@@ -59,6 +59,20 @@ namespace BLL
             if (nhanvien != null)
             {
                 return true;
+            }
+            else
+                return false;
+        }
+        public bool suaThongTin(int id, String MaNhanVien, String TenNhanVien, String MatKhau, bool NghiViec)
+        {
+            SALE_NHAN_VIEN nhanvien = da.searchNhanVien(id);
+            if (nhanvien != null)
+            {
+                nhanvien.MA_NHAN_VIEN = MaNhanVien;
+                nhanvien.HO_TEN = TenNhanVien;
+                nhanvien.MAT_KHAU = MatKhau;
+                nhanvien.NGHI_VIEC = NghiViec;
+                return da.update();
             }
             else
                 return false;
