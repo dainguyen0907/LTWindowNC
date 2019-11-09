@@ -34,7 +34,7 @@ namespace DAL
             }
         }
 
-        public bool update()
+        public bool updateNhanVien()
         {
             try
             {

@@ -3,8 +3,3 @@ C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\DAL\bin
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\DAL\bin\Debug\DAL.pdb
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\DAL\obj\Debug\DAL.dll
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\DAL\obj\Debug\DAL.pdb
-C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\LTWindowNC\Source\PhanMemQuanLiVanBan\DAL\bin\Debug\DAL.dll.config
-C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\LTWindowNC\Source\PhanMemQuanLiVanBan\DAL\bin\Debug\DAL.dll
-C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\LTWindowNC\Source\PhanMemQuanLiVanBan\DAL\bin\Debug\DAL.pdb
-C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\LTWindowNC\Source\PhanMemQuanLiVanBan\DAL\obj\Debug\DAL.dll
-C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\LTWindowNC\Source\PhanMemQuanLiVanBan\DAL\obj\Debug\DAL.pdb
