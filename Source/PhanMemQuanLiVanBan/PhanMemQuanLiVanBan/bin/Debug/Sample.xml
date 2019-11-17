@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=0 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=1 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=2 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=3 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=4 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=5 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=6 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=7 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=8 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=9 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=10 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=11 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=12 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=13 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=14 }</ID_LOAI_VAN_BAN>
+  </Table1>
+  <Table1>
+    <ID_LOAI_VAN_BAN>DataGridViewRow { Index=15 }</ID_LOAI_VAN_BAN>
+  </Table1>
+</NewDataSet>

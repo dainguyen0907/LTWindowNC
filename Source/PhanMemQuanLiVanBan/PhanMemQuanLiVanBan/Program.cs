@@ -6,15 +6,18 @@ using System.Windows.Forms;
 
 namespace PhanMemQuanLiVanBan
 {
+    
     static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         static public frm_DangNhap dangnhap=null;
         static public frm_Main mainForm = null;
-        static public string Tennhanvien;
+        static public string Idnhanvien;
         static public string id_congty;
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();

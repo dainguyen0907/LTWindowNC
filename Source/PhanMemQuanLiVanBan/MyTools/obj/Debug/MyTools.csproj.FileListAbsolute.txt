@@ -17,3 +17,4 @@ C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\DAL.dll
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\BLL.pdb
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\bin\Debug\DAL.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\MyTools\obj\Debug\MyTools.csproj.ResolveComReference.cache

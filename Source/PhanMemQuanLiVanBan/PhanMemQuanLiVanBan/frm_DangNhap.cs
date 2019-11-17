@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using MyTools;
 namespace PhanMemQuanLiVanBan
 {
     public partial class frm_DangNhap : Form
     {
         private int Status = Check_Config();
-
+        Password ps = new Password();
         public frm_DangNhap()
         {
             InitializeComponent();
@@ -122,7 +123,7 @@ namespace PhanMemQuanLiVanBan
             }
             else if (check_Enabale(txt_taikhoan.Text) == 0)
             {
-                MessageBox.Show("Tài khoản đã bạ khóa!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Tài khoản đã bị khóa!", "Thông báo", MessageBoxButtons.OK);
                 txt_matkhau.Text = "";
                 return;
             }
@@ -136,6 +137,7 @@ namespace PhanMemQuanLiVanBan
             }
         }
         //=============================================================================================
+        
         private int check_User(string user, string pass)//Kiểm tra tài khoản
         {
             if (Status == 0)
@@ -143,11 +145,11 @@ namespace PhanMemQuanLiVanBan
                 DataTable dt = new DataTable();
                 try
                 {
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SALE_NHAN_VIEN WHERE MA_NHAN_VIEN='" + txt_taikhoan.Text + "' and MAT_KHAU = '" + txt_matkhau.Text + "'", PhanMemQuanLiVanBan.Properties.Settings.Default.Connect);
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SALE_NHAN_VIEN WHERE MA_NHAN_VIEN='" + txt_taikhoan.Text + "' and MAT_KHAU = '" + ps.MaHoaPassword(txt_matkhau.Text) + "'", PhanMemQuanLiVanBan.Properties.Settings.Default.Connect);
                     da.Fill(dt);
                     if (dt.Rows.Count > 0)
                     {
-                        Program.Tennhanvien = dt.Rows[0][2].ToString();
+                        Program.Idnhanvien = dt.Rows[0][0].ToString();
                         return 1;// Hợp lệ
                     }
                 }
@@ -169,7 +171,7 @@ namespace PhanMemQuanLiVanBan
                     da.Fill(dt);
                     if (dt.Rows.Count > 0)
                     {
-                        Program.Tennhanvien = dt.Rows[0][2].ToString();
+                        Program.Idnhanvien = dt.Rows[0][0].ToString();
                         return 0;// Hợp lệ
                     }
                 }

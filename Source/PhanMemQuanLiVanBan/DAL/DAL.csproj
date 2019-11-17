@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PhanQuyenObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -52,6 +53,9 @@
       <DependentUpon>QLVB.dbml</DependentUpon>
     </Compile>
     <Compile Include="QLVB_database.cs" />
+    <Compile Include="VanBanDenObject.cs" />
+    <Compile Include="VanBanDiObject.cs" />
+    <Compile Include="VanBanNoiBoObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

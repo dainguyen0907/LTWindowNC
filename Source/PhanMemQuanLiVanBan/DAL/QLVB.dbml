@@ -28,7 +28,6 @@
       <Column Name="NGUOI_DUYET_VAN_BAN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="ID_PHONG_BAN_NHAN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="ID_PHONG_BAN_BAN_HANH" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="NAM" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="VAN_BAN_NOI_BO_FILE_NAME" Member="FILE_NAMEs" ThisKey="ID_VAN_BAN_NOI_BO" OtherKey="ID_VAN_BAN_NOI_BO" Type="FILE_NAME" />
       <Association Name="PHONG_BAN_VAN_BAN_NOI_BO" Member="PHONG_BAN" ThisKey="ID_PHONG_BAN_NHAN" OtherKey="ID_PHONG_BAN" Type="PHONG_BAN" IsForeignKey="true" />
       <Association Name="PHONG_BAN_VAN_BAN_NOI_BO1" Member="PHONG_BAN1" ThisKey="ID_PHONG_BAN_BAN_HANH" OtherKey="ID_PHONG_BAN" Type="PHONG_BAN" IsForeignKey="true" />
@@ -57,10 +56,7 @@
     <Type Name="MENUFORM">
       <Column Name="MENUFORMID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MENUFORMNAME" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
-      <Column Name="MENUFORMURL" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
-      <Column Name="SORTPARENT" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SORT" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MENUFORMPARENTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MENUFORTAG" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Association Name="MENUFORM_GROUPMENUFUNC" Member="GROUPMENUFUNCs" ThisKey="MENUFORMID" OtherKey="MENUFORMID" Type="GROUPMENUFUNC" />
     </Type>
   </Table>
@@ -145,7 +141,6 @@
       <Column Name="ID_DON_VI_DEN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="TRICH_YEU" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
       <Column Name="GHI_CHU" Type="System.String" DbType="NVarChar(3500)" CanBeNull="true" />
-      <Column Name="NAM" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NGUOI_NHAN_VAN_BAN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="NGUOI_KY_VAN_BAN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="NGUOI_DUYET_VAN_BAN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
@@ -167,7 +162,6 @@
       <Column Name="TRICH_YEU" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
       <Column Name="NOI_NHAN" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="GHI_CHU" Type="System.String" DbType="NVarChar(3500)" CanBeNull="true" />
-      <Column Name="NAM" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NGUOI_GUI_VAN_BAN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="NGUOI_KY_VAN_BAN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="NGUOI_DUYET_VAN_BAN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />

@@ -35,7 +35,6 @@
             this.btn_xoa = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_tailai = new System.Windows.Forms.ToolStripButton();
-            this.btn_in = new System.Windows.Forms.ToolStripButton();
             this.btn_xuatexcel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_maytinh = new System.Windows.Forms.ToolStripButton();
@@ -56,7 +55,6 @@
             this.btn_xoa,
             this.toolStripSeparator1,
             this.btn_tailai,
-            this.btn_in,
             this.btn_xuatexcel,
             this.toolStripSeparator2,
             this.btn_maytinh,
@@ -120,15 +118,6 @@
             this.btn_tailai.Text = "Tải lại";
             this.btn_tailai.Click += new System.EventHandler(this.btn_tailai_Click);
             // 
-            // btn_in
-            // 
-            this.btn_in.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_in.Image = ((System.Drawing.Image)(resources.GetObject("btn_in.Image")));
-            this.btn_in.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_in.Name = "btn_in";
-            this.btn_in.Size = new System.Drawing.Size(23, 22);
-            this.btn_in.Text = "In";
-            // 
             // btn_xuatexcel
             // 
             this.btn_xuatexcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -137,6 +126,7 @@
             this.btn_xuatexcel.Name = "btn_xuatexcel";
             this.btn_xuatexcel.Size = new System.Drawing.Size(23, 22);
             this.btn_xuatexcel.Text = "Xuất excel";
+            this.btn_xuatexcel.Click += new System.EventHandler(this.btn_xuatexcel_Click);
             // 
             // toolStripSeparator2
             // 
@@ -225,7 +215,6 @@
         private System.Windows.Forms.ToolStripButton btn_xoa;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btn_tailai;
-        private System.Windows.Forms.ToolStripButton btn_in;
         private System.Windows.Forms.ToolStripButton btn_xuatexcel;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btn_maytinh;

@@ -29,3 +29,5 @@ C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\PhanMem
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\DAL.dll
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\BLL.pdb
 C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\bin\Debug\DAL.pdb
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.frm_DoiMatKhau.resources
+C:\Users\QuocDai\Desktop\Do_An\WinformNangCao\Source\PhanMemQuanLiVanBan\PhanMemQuanLiVanBan\obj\Debug\PhanMemQuanLiVanBan.frm_nguoikyduyet.resources

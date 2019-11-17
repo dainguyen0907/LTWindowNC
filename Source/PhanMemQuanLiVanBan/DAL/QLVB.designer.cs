@@ -565,8 +565,6 @@ namespace DAL
 		
 		private System.Nullable<decimal> _ID_PHONG_BAN_BAN_HANH;
 		
-		private System.Nullable<int> _NAM;
-		
 		private EntitySet<FILE_NAME> _FILE_NAMEs;
 		
 		private EntityRef<PHONG_BAN> _PHONG_BAN;
@@ -601,8 +599,6 @@ namespace DAL
     partial void OnID_PHONG_BAN_NHANChanged();
     partial void OnID_PHONG_BAN_BAN_HANHChanging(System.Nullable<decimal> value);
     partial void OnID_PHONG_BAN_BAN_HANHChanged();
-    partial void OnNAMChanging(System.Nullable<int> value);
-    partial void OnNAMChanged();
     #endregion
 		
 		public VAN_BAN_NOI_BO()
@@ -857,26 +853,6 @@ namespace DAL
 					this._ID_PHONG_BAN_BAN_HANH = value;
 					this.SendPropertyChanged("ID_PHONG_BAN_BAN_HANH");
 					this.OnID_PHONG_BAN_BAN_HANHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAM", DbType="Int")]
-		public System.Nullable<int> NAM
-		{
-			get
-			{
-				return this._NAM;
-			}
-			set
-			{
-				if ((this._NAM != value))
-				{
-					this.OnNAMChanging(value);
-					this.SendPropertyChanging();
-					this._NAM = value;
-					this.SendPropertyChanged("NAM");
-					this.OnNAMChanged();
 				}
 			}
 		}
@@ -1387,13 +1363,7 @@ namespace DAL
 		
 		private string _MENUFORMNAME;
 		
-		private string _MENUFORMURL;
-		
-		private System.Nullable<int> _SORTPARENT;
-		
-		private System.Nullable<int> _SORT;
-		
-		private System.Nullable<int> _MENUFORMPARENTID;
+		private string _MENUFORTAG;
 		
 		private EntitySet<GROUPMENUFUNC> _GROUPMENUFUNCs;
 		
@@ -1405,14 +1375,8 @@ namespace DAL
     partial void OnMENUFORMIDChanged();
     partial void OnMENUFORMNAMEChanging(string value);
     partial void OnMENUFORMNAMEChanged();
-    partial void OnMENUFORMURLChanging(string value);
-    partial void OnMENUFORMURLChanged();
-    partial void OnSORTPARENTChanging(System.Nullable<int> value);
-    partial void OnSORTPARENTChanged();
-    partial void OnSORTChanging(System.Nullable<int> value);
-    partial void OnSORTChanged();
-    partial void OnMENUFORMPARENTIDChanging(System.Nullable<int> value);
-    partial void OnMENUFORMPARENTIDChanged();
+    partial void OnMENUFORTAGChanging(string value);
+    partial void OnMENUFORTAGChanged();
     #endregion
 		
 		public MENUFORM()
@@ -1461,82 +1425,22 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENUFORMURL", DbType="NVarChar(300)")]
-		public string MENUFORMURL
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENUFORTAG", DbType="NVarChar(300)")]
+		public string MENUFORTAG
 		{
 			get
 			{
-				return this._MENUFORMURL;
+				return this._MENUFORTAG;
 			}
 			set
 			{
-				if ((this._MENUFORMURL != value))
+				if ((this._MENUFORTAG != value))
 				{
-					this.OnMENUFORMURLChanging(value);
+					this.OnMENUFORTAGChanging(value);
 					this.SendPropertyChanging();
-					this._MENUFORMURL = value;
-					this.SendPropertyChanged("MENUFORMURL");
-					this.OnMENUFORMURLChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SORTPARENT", DbType="Int")]
-		public System.Nullable<int> SORTPARENT
-		{
-			get
-			{
-				return this._SORTPARENT;
-			}
-			set
-			{
-				if ((this._SORTPARENT != value))
-				{
-					this.OnSORTPARENTChanging(value);
-					this.SendPropertyChanging();
-					this._SORTPARENT = value;
-					this.SendPropertyChanged("SORTPARENT");
-					this.OnSORTPARENTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SORT", DbType="Int")]
-		public System.Nullable<int> SORT
-		{
-			get
-			{
-				return this._SORT;
-			}
-			set
-			{
-				if ((this._SORT != value))
-				{
-					this.OnSORTChanging(value);
-					this.SendPropertyChanging();
-					this._SORT = value;
-					this.SendPropertyChanged("SORT");
-					this.OnSORTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENUFORMPARENTID", DbType="Int")]
-		public System.Nullable<int> MENUFORMPARENTID
-		{
-			get
-			{
-				return this._MENUFORMPARENTID;
-			}
-			set
-			{
-				if ((this._MENUFORMPARENTID != value))
-				{
-					this.OnMENUFORMPARENTIDChanging(value);
-					this.SendPropertyChanging();
-					this._MENUFORMPARENTID = value;
-					this.SendPropertyChanged("MENUFORMPARENTID");
-					this.OnMENUFORMPARENTIDChanged();
+					this._MENUFORTAG = value;
+					this.SendPropertyChanged("MENUFORTAG");
+					this.OnMENUFORTAGChanged();
 				}
 			}
 		}
@@ -2987,8 +2891,6 @@ namespace DAL
 		
 		private string _GHI_CHU;
 		
-		private System.Nullable<int> _NAM;
-		
 		private string _NGUOI_NHAN_VAN_BAN;
 		
 		private string _NGUOI_KY_VAN_BAN;
@@ -3029,8 +2931,6 @@ namespace DAL
     partial void OnTRICH_YEUChanged();
     partial void OnGHI_CHUChanging(string value);
     partial void OnGHI_CHUChanged();
-    partial void OnNAMChanging(System.Nullable<int> value);
-    partial void OnNAMChanged();
     partial void OnNGUOI_NHAN_VAN_BANChanging(string value);
     partial void OnNGUOI_NHAN_VAN_BANChanged();
     partial void OnNGUOI_KY_VAN_BANChanging(string value);
@@ -3258,26 +3158,6 @@ namespace DAL
 					this._GHI_CHU = value;
 					this.SendPropertyChanged("GHI_CHU");
 					this.OnGHI_CHUChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAM", DbType="Int")]
-		public System.Nullable<int> NAM
-		{
-			get
-			{
-				return this._NAM;
-			}
-			set
-			{
-				if ((this._NAM != value))
-				{
-					this.OnNAMChanging(value);
-					this.SendPropertyChanging();
-					this._NAM = value;
-					this.SendPropertyChanged("NAM");
-					this.OnNAMChanged();
 				}
 			}
 		}
@@ -3534,8 +3414,6 @@ namespace DAL
 		
 		private string _GHI_CHU;
 		
-		private System.Nullable<int> _NAM;
-		
 		private string _NGUOI_GUI_VAN_BAN;
 		
 		private string _NGUOI_KY_VAN_BAN;
@@ -3574,8 +3452,6 @@ namespace DAL
     partial void OnNOI_NHANChanged();
     partial void OnGHI_CHUChanging(string value);
     partial void OnGHI_CHUChanged();
-    partial void OnNAMChanging(System.Nullable<int> value);
-    partial void OnNAMChanged();
     partial void OnNGUOI_GUI_VAN_BANChanging(string value);
     partial void OnNGUOI_GUI_VAN_BANChanged();
     partial void OnNGUOI_KY_VAN_BANChanging(string value);
@@ -3780,26 +3656,6 @@ namespace DAL
 					this._GHI_CHU = value;
 					this.SendPropertyChanged("GHI_CHU");
 					this.OnGHI_CHUChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAM", DbType="Int")]
-		public System.Nullable<int> NAM
-		{
-			get
-			{
-				return this._NAM;
-			}
-			set
-			{
-				if ((this._NAM != value))
-				{
-					this.OnNAMChanging(value);
-					this.SendPropertyChanging();
-					this._NAM = value;
-					this.SendPropertyChanged("NAM");
-					this.OnNAMChanged();
 				}
 			}
 		}
