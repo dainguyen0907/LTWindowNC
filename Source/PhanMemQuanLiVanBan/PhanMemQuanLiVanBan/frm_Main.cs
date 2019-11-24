@@ -276,16 +276,19 @@ namespace PhanMemQuanLiVanBan
         private void tk_vanbandi_Click(object sender, EventArgs e)
         {
             ShowTab(tab_tk_vanbandi);
+            loadComboboxTKVBDi();
         }
 
         private void tk_vanbanden_Click(object sender, EventArgs e)
         {
             ShowTab(tab_tk_vanbanden);
+            loadComboboxTKVBDen();
         }
 
         private void tk_vanbannoibo_Click(object sender, EventArgs e)
         {
             ShowTab(tab_tk_vanbannoibo);
+            loadComboboxTKVBNB();
         }
 
         private void btn_capnhatuser_Click(object sender, EventArgs e)
@@ -323,19 +326,19 @@ namespace PhanMemQuanLiVanBan
             {
                 foreach (Control bt in panel_hethong.Controls)
                 {
-                   bt.Visible = true;
+                   bt.Enabled = true;
                 }
                 foreach (Control bt in panel_thongke.Controls)
                 {
-                    bt.Visible = true;
+                    bt.Enabled = true;
                 }
                 foreach (Control bt in panel_vanban.Controls)
                 {
-                    bt.Visible = true;
+                    bt.Enabled = true;
                 }
                 foreach (Control bt in panel_vbnoibo.Controls)
                 {
-                    bt.Visible = true;
+                    bt.Enabled = true;
                 }
             }
             else
@@ -347,7 +350,7 @@ namespace PhanMemQuanLiVanBan
                     {
                         if (bt is SimpleButton && bt.Tag.ToString() == c)
                         {
-                            bt.Visible = true;
+                            bt.Enabled = true;
                             flag = true;
                             break;
                          }
@@ -359,7 +362,7 @@ namespace PhanMemQuanLiVanBan
                         if (bt is SimpleButton && bt.Tag.ToString() == c)
                         {
                             flag = true;
-                            bt.Visible = true;
+                            bt.Enabled = true;
                             break;
                         }
                     }
@@ -370,7 +373,7 @@ namespace PhanMemQuanLiVanBan
                         if (bt is SimpleButton && bt.Tag.ToString() == c)
                         {
                             flag = true;
-                            bt.Visible = true;
+                            bt.Enabled = true;
                             break;
                         }
                     }
@@ -380,7 +383,7 @@ namespace PhanMemQuanLiVanBan
                             break;
                         if (bt is SimpleButton && bt.Tag.ToString() == c)
                         {
-                            bt.Visible = true;
+                            bt.Enabled = true;
                             break;
                         }
                     }
@@ -855,14 +858,6 @@ namespace PhanMemQuanLiVanBan
         private void loadVanBanDen(DateTime date_from, DateTime date_to)
         {
             dgv_dsvbden.DataSource=bussiness.getvanbanden(date_from, date_to);
-            dgv_dsvbden.Columns["sovanban"].HeaderText = "Sổ văn bản";
-            dgv_dsvbden.Columns["loaivanban"].HeaderText = "Loại văn bản";
-            dgv_dsvbden.Columns["soden"].HeaderText = "Số đến";
-            dgv_dsvbden.Columns["sokyhieu"].HeaderText = "Số ký hiệu";
-            dgv_dsvbden.Columns["ngaybanhanh"].HeaderText = "Ngày ban hành";
-            dgv_dsvbden.Columns["ngayden"].HeaderText = "Ngày đến";
-            dgv_dsvbden.Columns["donvigui"].HeaderText = "Đơn vị gửi";
-            dgv_dsvbden.Columns["trichyeu"].HeaderText = "Trích yếu";
         }
 
         private void dtp_dsvbden_from_ValueChanged(object sender, EventArgs e)
@@ -939,17 +934,31 @@ namespace PhanMemQuanLiVanBan
         }
         private void btn_dsvbden_taomoi_Click(object sender, EventArgs e)
         {
-            ShowTab(tab_vanbanden);
-            LoadVanBanDenMoi();
+            if (btn_vanbanden.Enabled == true)
+            {
+                ShowTab(tab_vanbanden);
+                LoadVanBanDenMoi();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được cấp quyền truy cập", "THÔNG BÁO");
+            }
         }
 
         private void btn_dsvbden_sua_Click(object sender, EventArgs e)
         {
-            if (dgv_dsvbden.RowCount > 0)
+            if (btn_vanbanden.Enabled == true)
             {
-                ShowTab(tab_vanbanden);
-                loadVanBanDen(int.Parse(dgv_dsvbden.CurrentRow.Cells[0].Value.ToString()));
-                loadFileVanBanDen();
+                if (dgv_dsvbden.RowCount > 0)
+                {
+                    ShowTab(tab_vanbanden);
+                    loadVanBanDen(int.Parse(dgv_dsvbden.CurrentRow.Cells[0].Value.ToString()));
+                    loadFileVanBanDen();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được cấp quyền truy cập", "THÔNG BÁO");
             }
         }
 
@@ -1116,14 +1125,6 @@ namespace PhanMemQuanLiVanBan
         private void loadVanBanDi(DateTime date_from, DateTime date_to)
         {
             dgv_dsvanbandi.DataSource = bussiness.getVanBanDi(date_from, date_to);
-            dgv_dsvanbandi.Columns["id"].HeaderText = "ID văn bản đi";
-            dgv_dsvanbandi.Columns["sovanban"].HeaderText = "Sổ văn bản";
-            dgv_dsvanbandi.Columns["loaivanban"].HeaderText = "Loại văn bản";
-            dgv_dsvanbandi.Columns["sodi"].HeaderText = "Số đi";
-            dgv_dsvanbandi.Columns["sokyhieu"].HeaderText = "Số ký hiệu";
-            dgv_dsvanbandi.Columns["ngaybanhanh"].HeaderText = "Ngày ban hành";
-            dgv_dsvanbandi.Columns["noinhan"].HeaderText = "Nơi đi";
-            dgv_dsvanbandi.Columns["trichyeu"].HeaderText = "Trích yếu";
         }
 
         private void mts_dsvbdi_Load(object sender, EventArgs e)
@@ -1208,17 +1209,31 @@ namespace PhanMemQuanLiVanBan
 
         private void btn_dsvbdi_taomoi_Click(object sender, EventArgs e)
         {
-            ShowTab(tab_vanbandi);
-            LoadVanBanDiMoi();
+            if(btn_vanbandi.Enabled==true)
+            {
+                ShowTab(tab_vanbandi);
+                LoadVanBanDiMoi();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được cấp quyền truy cập", "THÔNG BÁO");
+            }
         }
 
         private void btn_dsvbdi_sua_Click(object sender, EventArgs e)
         {
-            if (dgv_dsvanbandi.RowCount > 0)
+            if (btn_vanbandi.Enabled == true)
             {
-                ShowTab(tab_vanbandi);
-                loadVanBanDi(int.Parse(dgv_dsvanbandi.CurrentRow.Cells[0].Value.ToString()));
-                loadFileVanBanDi();
+                if (dgv_dsvanbandi.RowCount > 0)
+                {
+                    ShowTab(tab_vanbandi);
+                    loadVanBanDi(int.Parse(dgv_dsvanbandi.CurrentRow.Cells[0].Value.ToString()));
+                    loadFileVanBanDi();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được cấp quyền truy cập", "THÔNG BÁO");
             }
             
         }
@@ -1378,14 +1393,6 @@ namespace PhanMemQuanLiVanBan
         private void LoadVanBanNoiBo(DateTime date_from,DateTime date_to)
         {
             dgv_dsvbnoibo.DataSource = bussiness.getVanBanNoiBo(date_from, date_to);
-            dgv_dsvbnoibo.Columns["id"].HeaderText = "ID văn bản nội bộ";
-            dgv_dsvbnoibo.Columns["tenvanban"].HeaderText = "Tên văn bản";
-            dgv_dsvbnoibo.Columns["loaivanban"].HeaderText = "Loại văn bản";
-            dgv_dsvbnoibo.Columns["phongbannhan"].HeaderText = "Phòng ban nhận";
-            dgv_dsvbnoibo.Columns["sokyhieu"].HeaderText = "Số ký hiệu";
-            dgv_dsvbnoibo.Columns["ngaybanhanh"].HeaderText = "Ngày ban hành";
-            dgv_dsvbnoibo.Columns["phongbanhanh"].HeaderText = "Phòng ban hành";
-            dgv_dsvbnoibo.Columns["trichyeu"].HeaderText = "Trích yếu";
         }
 
         private void mts_dsvanbannoibo_Load(object sender, EventArgs e)
@@ -1557,19 +1564,37 @@ namespace PhanMemQuanLiVanBan
                 gb_vnbn_file.Enabled = true;
             }
         }
-
-        private void btn_dsvbnb_sua_Click(object sender, EventArgs e)
+        private void btn_dsvbnb_taomoi_Click(object sender, EventArgs e)
         {
-            if (dgv_dsvbnoibo.RowCount > 0)
+            if (btn_vbnb.Enabled == true)
             {
                 ShowTab(tab_vanbannoibo);
-                loadVanBanNoiBo(int.Parse(dgv_dsvbnoibo.CurrentRow.Cells[0].Value.ToString()));
-                loadFileVanBanNoiBo();
+                LoadVanBanNoiBoMoi();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được cấp quyền truy cập", "THÔNG BÁO");
+            }
+        }
+        private void btn_dsvbnb_sua_Click(object sender, EventArgs e)
+        {
+            if (btn_vbnb.Enabled == true)
+            {
+                if (dgv_dsvbnoibo.RowCount > 0)
+                {
+                    ShowTab(tab_vanbannoibo);
+                    loadVanBanNoiBo(int.Parse(dgv_dsvbnoibo.CurrentRow.Cells["ID_VBNB"].Value.ToString()));
+                    loadFileVanBanNoiBo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được cấp quyền truy cập", "THÔNG BÁO");
             }
         }
         private void loadFileVanBanNoiBo()
         {
-            dgv_vbnb_file.DataSource = bussiness.getFileVBNoiBo(int.Parse(dgv_dsvbnoibo.CurrentRow.Cells[0].Value.ToString()));
+            dgv_vbnb_file.DataSource = bussiness.getFileVBNoiBo(int.Parse(dgv_dsvbnoibo.CurrentRow.Cells["ID_VBNB"].Value.ToString()));
         }
         private void btn_vbNoiBo_addfile_Click(object sender, EventArgs e)
         {
@@ -1744,6 +1769,202 @@ namespace PhanMemQuanLiVanBan
             frm_nguoikyduyet frm = new frm_nguoikyduyet();
             frm.ShowDialog();
         }
+        //Thống kê văn bản đi=============================================================
+        private void mts_tk_vbdi_Load(object sender, EventArgs e)
+        {
+            mts_tk_vbdi.SetToolStrip(dgv_tk_vbdi, null, null, false, false, false);
+        }
+
+        private void btn_tk_vbdi_tim_Click(object sender, EventArgs e)
+        {
+            int[] id = { int.Parse(cbb_tk_vbdi_lvb.SelectedValue.ToString()), int.Parse(cbb_tk_vbdi_svb.SelectedValue.ToString()) };
+            string[] tt={txt_tk_vbdi_sokyhieu.Text,txt_tk_vbdi_noinhan.Text,txt_tk_vbdi_trichyeu.Text};
+            dgv_tk_vbdi.DataSource = bussiness.getThongKeVBDi(dtp_tk_vbdi_from.Value, dtp_tk_vbdi_to.Value, id, tt);
+        }
+        
+        private void loadComboboxTKVBDi()
+        {
+            var svb = new Dictionary<int, string>();
+            svb.Add(-1, "--Chọn giá trị--");
+            foreach (DAL.SO_VAN_BAN so in bussiness.getsovanban(false))
+            {
+                svb.Add(int.Parse(so.ID_SO_VAN_BAN.ToString()), so.NAM.ToString() + "/" + so.TEN_SO_VAN_BAN.ToString());
+            }
+            cbb_tk_vbdi_svb.DataSource = svb.ToList();
+            cbb_tk_vbdi_svb.DisplayMember = "Value";
+            cbb_tk_vbdi_svb.ValueMember = "Key";
+
+            var lvb = new Dictionary<int, string>();
+            lvb.Add(-1, "--Chọn giá trị--");
+            foreach (DAL.LOAI_VAN_BAN so in bussiness.getLoaiVanBan())
+            {
+                lvb.Add(int.Parse(so.ID_LOAI_VAN_BAN.ToString()), so.TEN_LOAI_VAN_BAN.ToString());
+            }
+            cbb_tk_vbdi_lvb.DataSource = lvb.ToList();
+            cbb_tk_vbdi_lvb.DisplayMember = "Value";
+            cbb_tk_vbdi_lvb.ValueMember = "Key";
+        }
+
+        private void btn_tk_vbdi_in_Click(object sender, EventArgs e)
+        {
+            frm_reportVBDi form = new frm_reportVBDi(dtp_tk_vbdi_from.Value, dtp_tk_vbdi_to.Value);
+            form.ShowDialog();
+        }
+        private void dtp_tk_vbdi_from_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_tk_vbdi_from.Value > dtp_tk_vbdi_to.Value)
+            {
+                dtp_tk_vbdi_to.Value = dtp_tk_vbdi_from.Value;
+            }
+        }
+
+        private void dtp_tk_vbdi_to_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_tk_vbdi_from.Value > dtp_tk_vbdi_to.Value)
+            {
+                dtp_tk_vbdi_from.Value = dtp_tk_vbdi_to.Value;
+            }
+        }
+        //Thống kê văn bản đến=======================================================
+
+        private void mts_tk_vbden_Load(object sender, EventArgs e)
+        {
+            mts_tk_vbden.SetToolStrip(dgv_tk_vbden, null, null, false, false, false);
+        }
+
+        private void loadComboboxTKVBDen()
+        {
+            var svb = new Dictionary<int, string>();
+            svb.Add(-1, "--Chọn giá trị--");
+            foreach (DAL.SO_VAN_BAN so in bussiness.getsovanban(false))
+            {
+                svb.Add(int.Parse(so.ID_SO_VAN_BAN.ToString()), so.NAM.ToString() + "/" + so.TEN_SO_VAN_BAN.ToString());
+            }
+            cbb_tk_vbden_svb.DataSource = svb.ToList();
+            cbb_tk_vbden_svb.DisplayMember = "Value";
+            cbb_tk_vbden_svb.ValueMember = "Key";
+
+            var lvb = new Dictionary<int, string>();
+            lvb.Add(-1, "--Chọn giá trị--");
+            foreach (DAL.LOAI_VAN_BAN so in bussiness.getLoaiVanBan())
+            {
+                lvb.Add(int.Parse(so.ID_LOAI_VAN_BAN.ToString()), so.TEN_LOAI_VAN_BAN.ToString());
+            }
+            cbb_tk_vbden_lvb.DataSource = lvb.ToList();
+            cbb_tk_vbden_lvb.DisplayMember = "Value";
+            cbb_tk_vbden_lvb.ValueMember = "Key";
+
+            var nbh = new Dictionary<int, string>();
+            nbh.Add(-1, "--Chọn giá trị--");
+            foreach (DAL.NOI_BAN_HANH so in bussiness.getNoiBanHanh())
+            {
+                nbh.Add(int.Parse(so.ID_NOI_BAN_HANH.ToString()), so.NOI_BAN_HANH1.ToString());
+            }
+            cbb_tk_vbden_nbh.DataSource = nbh.ToList();
+            cbb_tk_vbden_nbh.DisplayMember = "Value";
+            cbb_tk_vbden_nbh.ValueMember = "Key";
+        }
+
+        private void btn_tk_vbden_tim_Click(object sender, EventArgs e)
+        {
+            int[] id = { int.Parse(cbb_tk_vbden_svb.SelectedValue.ToString()), int.Parse(cbb_tk_vbden_lvb.SelectedValue.ToString()), int.Parse(cbb_tk_vbden_nbh.SelectedValue.ToString()) };
+            string[] tt = { txt_tk_vbden_sokyhieu.Text, txt_tk_vbden_trichyeu.Text };
+            dgv_tk_vbden.DataSource = bussiness.getThongKeVBDen(dtp_tk_vbden_from.Value, dtp_tk_vbden_to.Value, id, tt);
+        }
+        private void btn_tk_vbden_in_Click(object sender, EventArgs e)
+        {
+            frm_reportVBDen form = new frm_reportVBDen(dtp_tk_vbden_from.Value,dtp_tk_vbden_to.Value);
+            form.ShowDialog();
+        }
+        
+        private void dtp_tk_vbden_from_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_tk_vbden_from.Value > dtp_tk_vbden_to.Value)
+            {
+                dtp_tk_vbden_to.Value = dtp_tk_vbden_from.Value;
+            }
+        }
+
+        private void dtp_tk_vbden_to_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_tk_vbden_from.Value > dtp_tk_vbden_to.Value)
+            {
+                dtp_tk_vbden_from.Value = dtp_tk_vbden_to.Value;
+            }
+        }
+        //Thống kê văn bản nội bộ====================================================
+        private void mts_tk_vbnb_Load(object sender, EventArgs e)
+        {
+            mts_tk_vbnb.SetToolStrip(dgv_tk_vbnb, null, null, false, false, false);
+        }
+
+        private void loadComboboxTKVBNB()
+        {
+          
+            var lvb = new Dictionary<int, string>();
+            lvb.Add(-1, "--Chọn giá trị--");
+            foreach (DAL.LOAI_VAN_BAN so in bussiness.getLoaiVanBan())
+            {
+                lvb.Add(int.Parse(so.ID_LOAI_VAN_BAN.ToString()), so.TEN_LOAI_VAN_BAN.ToString());
+            }
+            cbb_tk_vbnb_lvb.DataSource = lvb.ToList();
+            cbb_tk_vbnb_lvb.DisplayMember = "Value";
+            cbb_tk_vbnb_lvb.ValueMember = "Key";
+
+            var nbh = new Dictionary<int, string>();
+            nbh.Add(-1, "--Chọn giá trị--");
+            foreach (DAL.PHONG_BAN so in bussiness.getPhongBan())
+            {
+                nbh.Add(int.Parse(so.ID_PHONG_BAN.ToString()), so.TEN_PHONG_BAN.ToString());
+            }
+            cbb_tk_vbnb_pbh.DataSource = nbh.ToList();
+            cbb_tk_vbnb_pbh.DisplayMember = "Value";
+            cbb_tk_vbnb_pbh.ValueMember = "Key";
+
+            cbb_tk_vbnb_pbn.DataSource = nbh.ToList();
+            cbb_tk_vbnb_pbn.DisplayMember = "Value";
+            cbb_tk_vbnb_pbn.ValueMember = "Key";
+        }
+
+        private void btn_tk_vbnb_tim_Click(object sender, EventArgs e)
+        {
+            int[] id = { int.Parse(cbb_tk_vbnb_lvb.SelectedValue.ToString()), int.Parse(cbb_tk_vbnb_pbh.SelectedValue.ToString()), int.Parse(cbb_tk_vbnb_pbn.SelectedValue.ToString()) };
+            string[] tt = { txt_tk_vbnb_sokyhieu.Text,txt_tk_vbnb_tenvb.Text, txt_tk_vbnb_trichyeu.Text };
+            dgv_tk_vbnb.DataSource = bussiness.getThongKeVBNB(dtp_tk_vbnb_from.Value, dtp_tk_vbnb_to.Value, id, tt);
+        }
+
+        private void btn_tk_vbnb_in_Click(object sender, EventArgs e)
+        {
+            frm_reportVBNB frm = new frm_reportVBNB(dtp_tk_vbnb_from.Value,dtp_tk_vbnb_to.Value);
+            frm.ShowDialog();
+        }
+
+        private void dtp_tk_vbnb_from_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_tk_vbnb_from.Value > dtp_tk_vbnb_to.Value)
+            {
+                dtp_tk_vbnb_to.Value = dtp_tk_vbnb_from.Value;
+            }
+        }
+
+        private void dtp_tk_vbnb_to_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_tk_vbnb_from.Value > dtp_tk_vbnb_to.Value)
+            {
+                dtp_tk_vbnb_from.Value = dtp_tk_vbnb_to.Value;
+            }
+        }
+
+        
+
+        
+
+
+        
+
+        
+
+        
 
 
         

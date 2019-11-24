@@ -84,6 +84,14 @@
             this.tab_ds_vanbandi = new DevExpress.XtraTab.XtraTabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dgv_dsvanbandi = new System.Windows.Forms.DataGridView();
+            this.ID_VBDI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_VAN_BAN_DI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOAI_VAN_BAN_DI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_DI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_KY_HIEU_DI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAY_BAN_HANH_DI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOI_NHAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRICH_YEU_DI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_dsvbdi = new System.Windows.Forms.GroupBox();
             this.btn_dsvbdi_sua = new System.Windows.Forms.Button();
             this.btn_dsvbdi_taomoi = new System.Windows.Forms.Button();
@@ -303,6 +311,14 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgv_dsvbden = new System.Windows.Forms.DataGridView();
             this.ID_VBDEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOAI_VAN_BAN_DEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_VAN_BAN_DEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_KY_HIEU_DEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_DEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAY_BAN_HANH_DEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAY_DEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DON_VI_GUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRICH_YEU_DEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_dsvbden = new System.Windows.Forms.GroupBox();
             this.btn_dsvbden_sua = new System.Windows.Forms.Button();
             this.btn_dsvbden_taomoi = new System.Windows.Forms.Button();
@@ -369,6 +385,14 @@
             this.tab_ds_vanbannoibo = new DevExpress.XtraTab.XtraTabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dgv_dsvbnoibo = new System.Windows.Forms.DataGridView();
+            this.ID_VBNB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEN_VAN_BAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOAI_VAN_BAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_KY_HIEU_NB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAY_BAN_HANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PHONG_BAN_NHAN_NB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PHONG_BAN_HANH_NB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRICH_YEU_NB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_dsvbnoibo = new System.Windows.Forms.GroupBox();
             this.btn_dsvbnb_sua = new System.Windows.Forms.Button();
             this.btn_dsvbnb_taomoi = new System.Windows.Forms.Button();
@@ -378,8 +402,95 @@
             this.label34 = new System.Windows.Forms.Label();
             this.mts_dsvanbannoibo = new MyTools.MyToolStrip();
             this.tab_tk_vanbandi = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.dgv_tk_vbdi = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btn_tk_vbdi_in = new System.Windows.Forms.Button();
+            this.btn_tk_vbdi_tim = new System.Windows.Forms.Button();
+            this.txt_tk_vbdi_trichyeu = new System.Windows.Forms.RichTextBox();
+            this.txt_tk_vbdi_noinhan = new System.Windows.Forms.TextBox();
+            this.txt_tk_vbdi_sokyhieu = new System.Windows.Forms.TextBox();
+            this.cbb_tk_vbdi_lvb = new System.Windows.Forms.ComboBox();
+            this.cbb_tk_vbdi_svb = new System.Windows.Forms.ComboBox();
+            this.dtp_tk_vbdi_to = new System.Windows.Forms.DateTimePicker();
+            this.dtp_tk_vbdi_from = new System.Windows.Forms.DateTimePicker();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.mts_tk_vbdi = new MyTools.MyToolStrip();
             this.tab_tk_vanbanden = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.dgv_tk_vbden = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.cbb_tk_vbden_nbh = new System.Windows.Forms.ComboBox();
+            this.btn_tk_vbden_in = new System.Windows.Forms.Button();
+            this.btn_tk_vbden_tim = new System.Windows.Forms.Button();
+            this.txt_tk_vbden_trichyeu = new System.Windows.Forms.RichTextBox();
+            this.txt_tk_vbden_sokyhieu = new System.Windows.Forms.TextBox();
+            this.cbb_tk_vbden_lvb = new System.Windows.Forms.ComboBox();
+            this.cbb_tk_vbden_svb = new System.Windows.Forms.ComboBox();
+            this.dtp_tk_vbden_to = new System.Windows.Forms.DateTimePicker();
+            this.dtp_tk_vbden_from = new System.Windows.Forms.DateTimePicker();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.mts_tk_vbden = new MyTools.MyToolStrip();
             this.tab_tk_vanbannoibo = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.dgv_tk_vbnb = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.cbb_tk_vbnb_pbn = new System.Windows.Forms.ComboBox();
+            this.btn_tk_vbnb_in = new System.Windows.Forms.Button();
+            this.btn_tk_vbnb_tim = new System.Windows.Forms.Button();
+            this.txt_tk_vbnb_trichyeu = new System.Windows.Forms.RichTextBox();
+            this.txt_tk_vbnb_tenvb = new System.Windows.Forms.TextBox();
+            this.txt_tk_vbnb_sokyhieu = new System.Windows.Forms.TextBox();
+            this.cbb_tk_vbnb_pbh = new System.Windows.Forms.ComboBox();
+            this.cbb_tk_vbnb_lvb = new System.Windows.Forms.ComboBox();
+            this.dtp_tk_vbnb_to = new System.Windows.Forms.DateTimePicker();
+            this.dtp_tk_vbnb_from = new System.Windows.Forms.DateTimePicker();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.mts_tk_vbnb = new MyTools.MyToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.hideContainerRight.SuspendLayout();
             this.dock_thongtin.SuspendLayout();
@@ -467,6 +578,18 @@
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dsvbnoibo)).BeginInit();
             this.gb_dsvbnoibo.SuspendLayout();
+            this.tab_tk_vanbandi.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tk_vbdi)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            this.tab_tk_vanbanden.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tk_vbden)).BeginInit();
+            this.groupBox17.SuspendLayout();
+            this.tab_tk_vanbannoibo.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tk_vbnb)).BeginInit();
+            this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
             // dockManager
@@ -572,6 +695,7 @@
             // 
             // btn_dsvanbandi
             // 
+            this.btn_dsvanbandi.Enabled = false;
             this.btn_dsvanbandi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvanbandi.ImageOptions.Image")));
             this.btn_dsvanbandi.Location = new System.Drawing.Point(6, 277);
             this.btn_dsvanbandi.Name = "btn_dsvanbandi";
@@ -579,11 +703,11 @@
             this.btn_dsvanbandi.TabIndex = 6;
             this.btn_dsvanbandi.Tag = "btn_dsvbdi";
             this.btn_dsvanbandi.Text = "Danh sách văn bản đi";
-            this.btn_dsvanbandi.Visible = false;
             this.btn_dsvanbandi.Click += new System.EventHandler(this.btn_dsvanbandi_Click);
             // 
             // btn_dsvanbanden
             // 
+            this.btn_dsvanbanden.Enabled = false;
             this.btn_dsvanbanden.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvanbanden.ImageOptions.Image")));
             this.btn_dsvanbanden.Location = new System.Drawing.Point(5, 232);
             this.btn_dsvanbanden.Name = "btn_dsvanbanden";
@@ -591,11 +715,11 @@
             this.btn_dsvanbanden.TabIndex = 5;
             this.btn_dsvanbanden.Tag = "btn_dsvbden";
             this.btn_dsvanbanden.Text = "Danh sách văn bản đến";
-            this.btn_dsvanbanden.Visible = false;
             this.btn_dsvanbanden.Click += new System.EventHandler(this.btn_dsvanbanden_Click);
             // 
             // btn_vanbandi
             // 
+            this.btn_vanbandi.Enabled = false;
             this.btn_vanbandi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_vanbandi.ImageOptions.Image")));
             this.btn_vanbandi.Location = new System.Drawing.Point(5, 187);
             this.btn_vanbandi.Name = "btn_vanbandi";
@@ -603,11 +727,11 @@
             this.btn_vanbandi.TabIndex = 4;
             this.btn_vanbandi.Tag = "btn_vbdi";
             this.btn_vanbandi.Text = "Văn bản đi";
-            this.btn_vanbandi.Visible = false;
             this.btn_vanbandi.Click += new System.EventHandler(this.btn_vanbandi_Click);
             // 
             // btn_vanbanden
             // 
+            this.btn_vanbanden.Enabled = false;
             this.btn_vanbanden.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_vanbanden.ImageOptions.Image")));
             this.btn_vanbanden.Location = new System.Drawing.Point(5, 142);
             this.btn_vanbanden.Name = "btn_vanbanden";
@@ -615,11 +739,11 @@
             this.btn_vanbanden.TabIndex = 3;
             this.btn_vanbanden.Tag = "btn_vbden";
             this.btn_vanbanden.Text = "Văn bản đến";
-            this.btn_vanbanden.Visible = false;
             this.btn_vanbanden.Click += new System.EventHandler(this.btn_vanbanden_Click);
             // 
             // btn_noibanhanh
             // 
+            this.btn_noibanhanh.Enabled = false;
             this.btn_noibanhanh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_noibanhanh.ImageOptions.Image")));
             this.btn_noibanhanh.Location = new System.Drawing.Point(5, 96);
             this.btn_noibanhanh.Name = "btn_noibanhanh";
@@ -627,11 +751,11 @@
             this.btn_noibanhanh.TabIndex = 2;
             this.btn_noibanhanh.Tag = "btn_nbh";
             this.btn_noibanhanh.Text = "Nơi ban hành";
-            this.btn_noibanhanh.Visible = false;
             this.btn_noibanhanh.Click += new System.EventHandler(this.btn_noibanhanh_Click);
             // 
             // btn_loaivanban
             // 
+            this.btn_loaivanban.Enabled = false;
             this.btn_loaivanban.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_loaivanban.ImageOptions.Image")));
             this.btn_loaivanban.Location = new System.Drawing.Point(5, 51);
             this.btn_loaivanban.Name = "btn_loaivanban";
@@ -639,11 +763,11 @@
             this.btn_loaivanban.TabIndex = 1;
             this.btn_loaivanban.Tag = "btn_lvb";
             this.btn_loaivanban.Text = "Loại văn bản";
-            this.btn_loaivanban.Visible = false;
             this.btn_loaivanban.Click += new System.EventHandler(this.btn_loaivanban_Click);
             // 
             // btn_sovanban
             // 
+            this.btn_sovanban.Enabled = false;
             this.btn_sovanban.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_sovanban.ImageOptions.Image")));
             this.btn_sovanban.Location = new System.Drawing.Point(5, 6);
             this.btn_sovanban.Name = "btn_sovanban";
@@ -651,7 +775,6 @@
             this.btn_sovanban.TabIndex = 0;
             this.btn_sovanban.Tag = "btn_svb";
             this.btn_sovanban.Text = "Sổ văn bản";
-            this.btn_sovanban.Visible = false;
             this.btn_sovanban.Click += new System.EventHandler(this.btn_sovanban_Click);
             // 
             // panel_vbnoibo
@@ -668,6 +791,7 @@
             // 
             // btn_dsvbnb
             // 
+            this.btn_dsvbnb.Enabled = false;
             this.btn_dsvbnb.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvbnb.ImageOptions.Image")));
             this.btn_dsvbnb.Location = new System.Drawing.Point(5, 96);
             this.btn_dsvbnb.Name = "btn_dsvbnb";
@@ -675,11 +799,11 @@
             this.btn_dsvbnb.TabIndex = 2;
             this.btn_dsvbnb.Tag = "btn_dsvbnb";
             this.btn_dsvbnb.Text = "Danh sách văn bản nội bộ";
-            this.btn_dsvbnb.Visible = false;
             this.btn_dsvbnb.Click += new System.EventHandler(this.btn_dsvbnb_Click);
             // 
             // btn_vbnb
             // 
+            this.btn_vbnb.Enabled = false;
             this.btn_vbnb.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_vbnb.ImageOptions.Image")));
             this.btn_vbnb.Location = new System.Drawing.Point(5, 51);
             this.btn_vbnb.Name = "btn_vbnb";
@@ -687,11 +811,11 @@
             this.btn_vbnb.TabIndex = 1;
             this.btn_vbnb.Tag = "btn_vbnb";
             this.btn_vbnb.Text = "Văn bản nội bộ";
-            this.btn_vbnb.Visible = false;
             this.btn_vbnb.Click += new System.EventHandler(this.btn_vbnb_Click);
             // 
             // btn_phongban
             // 
+            this.btn_phongban.Enabled = false;
             this.btn_phongban.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_phongban.ImageOptions.Image")));
             this.btn_phongban.Location = new System.Drawing.Point(5, 6);
             this.btn_phongban.Name = "btn_phongban";
@@ -699,7 +823,6 @@
             this.btn_phongban.TabIndex = 0;
             this.btn_phongban.Tag = "btn_pb";
             this.btn_phongban.Text = "Phòng ban";
-            this.btn_phongban.Visible = false;
             this.btn_phongban.Click += new System.EventHandler(this.btn_phongban_Click);
             // 
             // panel_thongke
@@ -716,6 +839,7 @@
             // 
             // tk_vanbannoibo
             // 
+            this.tk_vanbannoibo.Enabled = false;
             this.tk_vanbannoibo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tk_vanbannoibo.ImageOptions.Image")));
             this.tk_vanbannoibo.Location = new System.Drawing.Point(5, 96);
             this.tk_vanbannoibo.Name = "tk_vanbannoibo";
@@ -723,11 +847,11 @@
             this.tk_vanbannoibo.TabIndex = 2;
             this.tk_vanbannoibo.Tag = "btn_tkvbnb";
             this.tk_vanbannoibo.Text = "Thống kê văn bản nội bộ";
-            this.tk_vanbannoibo.Visible = false;
             this.tk_vanbannoibo.Click += new System.EventHandler(this.tk_vanbannoibo_Click);
             // 
             // tk_vanbanden
             // 
+            this.tk_vanbanden.Enabled = false;
             this.tk_vanbanden.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tk_vanbanden.ImageOptions.Image")));
             this.tk_vanbanden.Location = new System.Drawing.Point(5, 51);
             this.tk_vanbanden.Name = "tk_vanbanden";
@@ -735,11 +859,11 @@
             this.tk_vanbanden.TabIndex = 1;
             this.tk_vanbanden.Tag = "btn_tkvbden";
             this.tk_vanbanden.Text = "Thống kê văn bản đến";
-            this.tk_vanbanden.Visible = false;
             this.tk_vanbanden.Click += new System.EventHandler(this.tk_vanbanden_Click);
             // 
             // tk_vanbandi
             // 
+            this.tk_vanbandi.Enabled = false;
             this.tk_vanbandi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tk_vanbandi.ImageOptions.Image")));
             this.tk_vanbandi.Location = new System.Drawing.Point(5, 6);
             this.tk_vanbandi.Name = "tk_vanbandi";
@@ -747,7 +871,6 @@
             this.tk_vanbandi.TabIndex = 0;
             this.tk_vanbandi.Tag = "btn_tk_vbdi";
             this.tk_vanbandi.Text = "Thống kê văn bản đi";
-            this.tk_vanbandi.Visible = false;
             this.tk_vanbandi.Click += new System.EventHandler(this.tk_vanbandi_Click);
             // 
             // panel_hethong
@@ -766,6 +889,7 @@
             // 
             // btn_thongtincty
             // 
+            this.btn_thongtincty.Enabled = false;
             this.btn_thongtincty.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_thongtincty.ImageOptions.Image")));
             this.btn_thongtincty.Location = new System.Drawing.Point(5, 232);
             this.btn_thongtincty.Name = "btn_thongtincty";
@@ -773,11 +897,11 @@
             this.btn_thongtincty.TabIndex = 5;
             this.btn_thongtincty.Tag = "btn_ttcongty";
             this.btn_thongtincty.Text = "Thông tin công ty";
-            this.btn_thongtincty.Visible = false;
             this.btn_thongtincty.Click += new System.EventHandler(this.btn_thongtincty_Click);
             // 
             // btn_phanquyen
             // 
+            this.btn_phanquyen.Enabled = false;
             this.btn_phanquyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_phanquyen.ImageOptions.Image")));
             this.btn_phanquyen.Location = new System.Drawing.Point(5, 187);
             this.btn_phanquyen.Name = "btn_phanquyen";
@@ -785,11 +909,11 @@
             this.btn_phanquyen.TabIndex = 4;
             this.btn_phanquyen.Tag = "btn_phanquyen";
             this.btn_phanquyen.Text = "Phân quyền nhân viên";
-            this.btn_phanquyen.Visible = false;
             this.btn_phanquyen.Click += new System.EventHandler(this.btn_phanquyen_Click);
             // 
             // btn_nguoikyduyet
             // 
+            this.btn_nguoikyduyet.Enabled = false;
             this.btn_nguoikyduyet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_nguoikyduyet.ImageOptions.Image")));
             this.btn_nguoikyduyet.Location = new System.Drawing.Point(5, 142);
             this.btn_nguoikyduyet.Name = "btn_nguoikyduyet";
@@ -797,11 +921,11 @@
             this.btn_nguoikyduyet.TabIndex = 3;
             this.btn_nguoikyduyet.Tag = "btn_nguoiduyet";
             this.btn_nguoikyduyet.Text = "Thông tin người ký duyệt";
-            this.btn_nguoikyduyet.Visible = false;
             this.btn_nguoikyduyet.Click += new System.EventHandler(this.btn_nguoikyduyet_Click);
             // 
             // btn_capnhatuser
             // 
+            this.btn_capnhatuser.Enabled = false;
             this.btn_capnhatuser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_capnhatuser.ImageOptions.Image")));
             this.btn_capnhatuser.Location = new System.Drawing.Point(5, 96);
             this.btn_capnhatuser.Name = "btn_capnhatuser";
@@ -809,7 +933,6 @@
             this.btn_capnhatuser.TabIndex = 2;
             this.btn_capnhatuser.Tag = "btn_nguoidung";
             this.btn_capnhatuser.Text = "Cập nhật người dùng";
-            this.btn_capnhatuser.Visible = false;
             this.btn_capnhatuser.Click += new System.EventHandler(this.btn_capnhatuser_Click);
             // 
             // btn_doimatkhau
@@ -1087,6 +1210,15 @@
             // 
             this.dgv_dsvanbandi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_dsvanbandi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_dsvanbandi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_VBDI,
+            this.SO_VAN_BAN_DI,
+            this.LOAI_VAN_BAN_DI,
+            this.SO_DI,
+            this.SO_KY_HIEU_DI,
+            this.NGAY_BAN_HANH_DI,
+            this.NOI_NHAN,
+            this.TRICH_YEU_DI});
             this.dgv_dsvanbandi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsvanbandi.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgv_dsvanbandi.Location = new System.Drawing.Point(3, 17);
@@ -1095,6 +1227,62 @@
             this.dgv_dsvanbandi.ReadOnly = true;
             this.dgv_dsvanbandi.Size = new System.Drawing.Size(1084, 597);
             this.dgv_dsvanbandi.TabIndex = 3;
+            // 
+            // ID_VBDI
+            // 
+            this.ID_VBDI.DataPropertyName = "id";
+            this.ID_VBDI.HeaderText = "ID văn bản đi";
+            this.ID_VBDI.Name = "ID_VBDI";
+            this.ID_VBDI.ReadOnly = true;
+            // 
+            // SO_VAN_BAN_DI
+            // 
+            this.SO_VAN_BAN_DI.DataPropertyName = "sovanban";
+            this.SO_VAN_BAN_DI.HeaderText = "Sổ văn bản";
+            this.SO_VAN_BAN_DI.Name = "SO_VAN_BAN_DI";
+            this.SO_VAN_BAN_DI.ReadOnly = true;
+            // 
+            // LOAI_VAN_BAN_DI
+            // 
+            this.LOAI_VAN_BAN_DI.DataPropertyName = "loaivanban";
+            this.LOAI_VAN_BAN_DI.HeaderText = "Loại văn bản";
+            this.LOAI_VAN_BAN_DI.Name = "LOAI_VAN_BAN_DI";
+            this.LOAI_VAN_BAN_DI.ReadOnly = true;
+            // 
+            // SO_DI
+            // 
+            this.SO_DI.DataPropertyName = "sodi";
+            this.SO_DI.HeaderText = "Số đi";
+            this.SO_DI.Name = "SO_DI";
+            this.SO_DI.ReadOnly = true;
+            // 
+            // SO_KY_HIEU_DI
+            // 
+            this.SO_KY_HIEU_DI.DataPropertyName = "sokyhieu";
+            this.SO_KY_HIEU_DI.HeaderText = "Số ký hiệu";
+            this.SO_KY_HIEU_DI.Name = "SO_KY_HIEU_DI";
+            this.SO_KY_HIEU_DI.ReadOnly = true;
+            // 
+            // NGAY_BAN_HANH_DI
+            // 
+            this.NGAY_BAN_HANH_DI.DataPropertyName = "ngaybanhanh";
+            this.NGAY_BAN_HANH_DI.HeaderText = "Ngày ban hành";
+            this.NGAY_BAN_HANH_DI.Name = "NGAY_BAN_HANH_DI";
+            this.NGAY_BAN_HANH_DI.ReadOnly = true;
+            // 
+            // NOI_NHAN
+            // 
+            this.NOI_NHAN.DataPropertyName = "noinhan";
+            this.NOI_NHAN.HeaderText = "Nơi nhận";
+            this.NOI_NHAN.Name = "NOI_NHAN";
+            this.NOI_NHAN.ReadOnly = true;
+            // 
+            // TRICH_YEU_DI
+            // 
+            this.TRICH_YEU_DI.DataPropertyName = "trichyeu";
+            this.TRICH_YEU_DI.HeaderText = "Trích yếu";
+            this.TRICH_YEU_DI.Name = "TRICH_YEU_DI";
+            this.TRICH_YEU_DI.ReadOnly = true;
             // 
             // gb_dsvbdi
             // 
@@ -3281,11 +3469,20 @@
             this.dgv_dsvbden.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_dsvbden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_dsvbden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_VBDEN});
+            this.ID_VBDEN,
+            this.LOAI_VAN_BAN_DEN,
+            this.SO_VAN_BAN_DEN,
+            this.SO_KY_HIEU_DEN,
+            this.SO_DEN,
+            this.NGAY_BAN_HANH_DEN,
+            this.NGAY_DEN,
+            this.DON_VI_GUI,
+            this.TRICH_YEU_DEN});
             this.dgv_dsvbden.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsvbden.Location = new System.Drawing.Point(3, 17);
             this.dgv_dsvbden.MultiSelect = false;
             this.dgv_dsvbden.Name = "dgv_dsvbden";
+            this.dgv_dsvbden.ReadOnly = true;
             this.dgv_dsvbden.Size = new System.Drawing.Size(1084, 597);
             this.dgv_dsvbden.TabIndex = 3;
             // 
@@ -3294,6 +3491,63 @@
             this.ID_VBDEN.DataPropertyName = "id";
             this.ID_VBDEN.HeaderText = "ID văn bản đên";
             this.ID_VBDEN.Name = "ID_VBDEN";
+            this.ID_VBDEN.ReadOnly = true;
+            // 
+            // LOAI_VAN_BAN_DEN
+            // 
+            this.LOAI_VAN_BAN_DEN.DataPropertyName = "loaivanban";
+            this.LOAI_VAN_BAN_DEN.HeaderText = "Loại văn bản";
+            this.LOAI_VAN_BAN_DEN.Name = "LOAI_VAN_BAN_DEN";
+            this.LOAI_VAN_BAN_DEN.ReadOnly = true;
+            // 
+            // SO_VAN_BAN_DEN
+            // 
+            this.SO_VAN_BAN_DEN.DataPropertyName = "sovanban";
+            this.SO_VAN_BAN_DEN.HeaderText = "Sổ văn bản";
+            this.SO_VAN_BAN_DEN.Name = "SO_VAN_BAN_DEN";
+            this.SO_VAN_BAN_DEN.ReadOnly = true;
+            // 
+            // SO_KY_HIEU_DEN
+            // 
+            this.SO_KY_HIEU_DEN.DataPropertyName = "sokyhieu";
+            this.SO_KY_HIEU_DEN.HeaderText = "Số ký hiệu";
+            this.SO_KY_HIEU_DEN.Name = "SO_KY_HIEU_DEN";
+            this.SO_KY_HIEU_DEN.ReadOnly = true;
+            // 
+            // SO_DEN
+            // 
+            this.SO_DEN.DataPropertyName = "soden";
+            this.SO_DEN.HeaderText = "Số đến";
+            this.SO_DEN.Name = "SO_DEN";
+            this.SO_DEN.ReadOnly = true;
+            // 
+            // NGAY_BAN_HANH_DEN
+            // 
+            this.NGAY_BAN_HANH_DEN.DataPropertyName = "ngaybanhanh";
+            this.NGAY_BAN_HANH_DEN.HeaderText = "Ngày ban hành";
+            this.NGAY_BAN_HANH_DEN.Name = "NGAY_BAN_HANH_DEN";
+            this.NGAY_BAN_HANH_DEN.ReadOnly = true;
+            // 
+            // NGAY_DEN
+            // 
+            this.NGAY_DEN.DataPropertyName = "ngayden";
+            this.NGAY_DEN.HeaderText = "Ngày đến";
+            this.NGAY_DEN.Name = "NGAY_DEN";
+            this.NGAY_DEN.ReadOnly = true;
+            // 
+            // DON_VI_GUI
+            // 
+            this.DON_VI_GUI.DataPropertyName = "donvigui";
+            this.DON_VI_GUI.HeaderText = "Đơn vị gửi";
+            this.DON_VI_GUI.Name = "DON_VI_GUI";
+            this.DON_VI_GUI.ReadOnly = true;
+            // 
+            // TRICH_YEU_DEN
+            // 
+            this.TRICH_YEU_DEN.DataPropertyName = "trichyeu";
+            this.TRICH_YEU_DEN.HeaderText = "Trích yếu";
+            this.TRICH_YEU_DEN.Name = "TRICH_YEU_DEN";
+            this.TRICH_YEU_DEN.ReadOnly = true;
             // 
             // gb_dsvbden
             // 
@@ -3918,12 +4172,77 @@
             // 
             this.dgv_dsvbnoibo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_dsvbnoibo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_dsvbnoibo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_VBNB,
+            this.TEN_VAN_BAN,
+            this.LOAI_VAN_BAN,
+            this.SO_KY_HIEU_NB,
+            this.NGAY_BAN_HANH,
+            this.PHONG_BAN_NHAN_NB,
+            this.PHONG_BAN_HANH_NB,
+            this.TRICH_YEU_NB});
             this.dgv_dsvbnoibo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsvbnoibo.Location = new System.Drawing.Point(3, 17);
             this.dgv_dsvbnoibo.MultiSelect = false;
             this.dgv_dsvbnoibo.Name = "dgv_dsvbnoibo";
+            this.dgv_dsvbnoibo.ReadOnly = true;
             this.dgv_dsvbnoibo.Size = new System.Drawing.Size(1084, 597);
             this.dgv_dsvbnoibo.TabIndex = 0;
+            // 
+            // ID_VBNB
+            // 
+            this.ID_VBNB.DataPropertyName = "id";
+            this.ID_VBNB.HeaderText = "ID văn bản";
+            this.ID_VBNB.Name = "ID_VBNB";
+            this.ID_VBNB.ReadOnly = true;
+            // 
+            // TEN_VAN_BAN
+            // 
+            this.TEN_VAN_BAN.DataPropertyName = "tenvanban";
+            this.TEN_VAN_BAN.HeaderText = "Tên văn bản";
+            this.TEN_VAN_BAN.Name = "TEN_VAN_BAN";
+            this.TEN_VAN_BAN.ReadOnly = true;
+            // 
+            // LOAI_VAN_BAN
+            // 
+            this.LOAI_VAN_BAN.DataPropertyName = "loaivanban";
+            this.LOAI_VAN_BAN.HeaderText = "Loại văn bản";
+            this.LOAI_VAN_BAN.Name = "LOAI_VAN_BAN";
+            this.LOAI_VAN_BAN.ReadOnly = true;
+            // 
+            // SO_KY_HIEU_NB
+            // 
+            this.SO_KY_HIEU_NB.HeaderText = "Số ký hiệu";
+            this.SO_KY_HIEU_NB.Name = "SO_KY_HIEU_NB";
+            this.SO_KY_HIEU_NB.ReadOnly = true;
+            // 
+            // NGAY_BAN_HANH
+            // 
+            this.NGAY_BAN_HANH.DataPropertyName = "ngaybanhanh";
+            this.NGAY_BAN_HANH.HeaderText = "Ngày ban hành";
+            this.NGAY_BAN_HANH.Name = "NGAY_BAN_HANH";
+            this.NGAY_BAN_HANH.ReadOnly = true;
+            // 
+            // PHONG_BAN_NHAN_NB
+            // 
+            this.PHONG_BAN_NHAN_NB.DataPropertyName = "phongbannhan";
+            this.PHONG_BAN_NHAN_NB.HeaderText = "Phòng ban nhận";
+            this.PHONG_BAN_NHAN_NB.Name = "PHONG_BAN_NHAN_NB";
+            this.PHONG_BAN_NHAN_NB.ReadOnly = true;
+            // 
+            // PHONG_BAN_HANH_NB
+            // 
+            this.PHONG_BAN_HANH_NB.DataPropertyName = "phongbanhanh";
+            this.PHONG_BAN_HANH_NB.HeaderText = "Phòng ban hành";
+            this.PHONG_BAN_HANH_NB.Name = "PHONG_BAN_HANH_NB";
+            this.PHONG_BAN_HANH_NB.ReadOnly = true;
+            // 
+            // TRICH_YEU_NB
+            // 
+            this.TRICH_YEU_NB.DataPropertyName = "trichyeu";
+            this.TRICH_YEU_NB.HeaderText = "Trích yếu";
+            this.TRICH_YEU_NB.Name = "TRICH_YEU_NB";
+            this.TRICH_YEU_NB.ReadOnly = true;
             // 
             // gb_dsvbnoibo
             // 
@@ -3959,6 +4278,7 @@
             this.btn_dsvbnb_taomoi.TabIndex = 14;
             this.btn_dsvbnb_taomoi.Text = "Tạo mới";
             this.btn_dsvbnb_taomoi.UseVisualStyleBackColor = true;
+            this.btn_dsvbnb_taomoi.Click += new System.EventHandler(this.btn_dsvbnb_taomoi_Click);
             // 
             // dtp_dsvbnb_to
             // 
@@ -4007,24 +4327,847 @@
             // 
             // tab_tk_vanbandi
             // 
+            this.tab_tk_vanbandi.Controls.Add(this.groupBox15);
+            this.tab_tk_vanbandi.Controls.Add(this.groupBox9);
+            this.tab_tk_vanbandi.Controls.Add(this.mts_tk_vbdi);
             this.tab_tk_vanbandi.Name = "tab_tk_vanbandi";
             this.tab_tk_vanbandi.PageVisible = false;
             this.tab_tk_vanbandi.Size = new System.Drawing.Size(1090, 711);
             this.tab_tk_vanbandi.Text = "Thống kê văn bản đi";
             // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.dgv_tk_vbdi);
+            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox15.Location = new System.Drawing.Point(0, 198);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(1090, 513);
+            this.groupBox15.TabIndex = 2;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Danh sách tìm kiếm";
+            // 
+            // dgv_tk_vbdi
+            // 
+            this.dgv_tk_vbdi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_tk_vbdi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tk_vbdi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dgv_tk_vbdi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tk_vbdi.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgv_tk_vbdi.Location = new System.Drawing.Point(3, 17);
+            this.dgv_tk_vbdi.MultiSelect = false;
+            this.dgv_tk_vbdi.Name = "dgv_tk_vbdi";
+            this.dgv_tk_vbdi.ReadOnly = true;
+            this.dgv_tk_vbdi.Size = new System.Drawing.Size(1084, 493);
+            this.dgv_tk_vbdi.TabIndex = 4;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID văn bản đi";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "sovanban";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Sổ văn bản";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "loaivanban";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Loại văn bản";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "sodi";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Số đi";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "sokyhieu";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Số ký hiệu";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "ngaybanhanh";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Ngày ban hành";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "noinhan";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Nơi nhận";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "trichyeu";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Trích yếu";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.btn_tk_vbdi_in);
+            this.groupBox9.Controls.Add(this.btn_tk_vbdi_tim);
+            this.groupBox9.Controls.Add(this.txt_tk_vbdi_trichyeu);
+            this.groupBox9.Controls.Add(this.txt_tk_vbdi_noinhan);
+            this.groupBox9.Controls.Add(this.txt_tk_vbdi_sokyhieu);
+            this.groupBox9.Controls.Add(this.cbb_tk_vbdi_lvb);
+            this.groupBox9.Controls.Add(this.cbb_tk_vbdi_svb);
+            this.groupBox9.Controls.Add(this.dtp_tk_vbdi_to);
+            this.groupBox9.Controls.Add(this.dtp_tk_vbdi_from);
+            this.groupBox9.Controls.Add(this.label74);
+            this.groupBox9.Controls.Add(this.label73);
+            this.groupBox9.Controls.Add(this.label72);
+            this.groupBox9.Controls.Add(this.label71);
+            this.groupBox9.Controls.Add(this.label69);
+            this.groupBox9.Controls.Add(this.label68);
+            this.groupBox9.Controls.Add(this.label63);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox9.Location = new System.Drawing.Point(0, 24);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(1090, 174);
+            this.groupBox9.TabIndex = 1;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Tìm kiếm văn bản đi";
+            // 
+            // btn_tk_vbdi_in
+            // 
+            this.btn_tk_vbdi_in.Location = new System.Drawing.Point(811, 26);
+            this.btn_tk_vbdi_in.Name = "btn_tk_vbdi_in";
+            this.btn_tk_vbdi_in.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbdi_in.TabIndex = 15;
+            this.btn_tk_vbdi_in.Text = "Thống kê";
+            this.btn_tk_vbdi_in.UseVisualStyleBackColor = true;
+            this.btn_tk_vbdi_in.Click += new System.EventHandler(this.btn_tk_vbdi_in_Click);
+            // 
+            // btn_tk_vbdi_tim
+            // 
+            this.btn_tk_vbdi_tim.Location = new System.Drawing.Point(687, 26);
+            this.btn_tk_vbdi_tim.Name = "btn_tk_vbdi_tim";
+            this.btn_tk_vbdi_tim.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbdi_tim.TabIndex = 14;
+            this.btn_tk_vbdi_tim.Text = "Tìm kiếm";
+            this.btn_tk_vbdi_tim.UseVisualStyleBackColor = true;
+            this.btn_tk_vbdi_tim.Click += new System.EventHandler(this.btn_tk_vbdi_tim_Click);
+            // 
+            // txt_tk_vbdi_trichyeu
+            // 
+            this.txt_tk_vbdi_trichyeu.Location = new System.Drawing.Point(647, 70);
+            this.txt_tk_vbdi_trichyeu.Name = "txt_tk_vbdi_trichyeu";
+            this.txt_tk_vbdi_trichyeu.Size = new System.Drawing.Size(425, 64);
+            this.txt_tk_vbdi_trichyeu.TabIndex = 13;
+            this.txt_tk_vbdi_trichyeu.Text = "";
+            // 
+            // txt_tk_vbdi_noinhan
+            // 
+            this.txt_tk_vbdi_noinhan.Location = new System.Drawing.Point(398, 113);
+            this.txt_tk_vbdi_noinhan.Name = "txt_tk_vbdi_noinhan";
+            this.txt_tk_vbdi_noinhan.Size = new System.Drawing.Size(158, 21);
+            this.txt_tk_vbdi_noinhan.TabIndex = 12;
+            // 
+            // txt_tk_vbdi_sokyhieu
+            // 
+            this.txt_tk_vbdi_sokyhieu.Location = new System.Drawing.Point(398, 70);
+            this.txt_tk_vbdi_sokyhieu.Name = "txt_tk_vbdi_sokyhieu";
+            this.txt_tk_vbdi_sokyhieu.Size = new System.Drawing.Size(158, 21);
+            this.txt_tk_vbdi_sokyhieu.TabIndex = 11;
+            // 
+            // cbb_tk_vbdi_lvb
+            // 
+            this.cbb_tk_vbdi_lvb.FormattingEnabled = true;
+            this.cbb_tk_vbdi_lvb.Location = new System.Drawing.Point(145, 113);
+            this.cbb_tk_vbdi_lvb.Name = "cbb_tk_vbdi_lvb";
+            this.cbb_tk_vbdi_lvb.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbdi_lvb.TabIndex = 10;
+            // 
+            // cbb_tk_vbdi_svb
+            // 
+            this.cbb_tk_vbdi_svb.FormattingEnabled = true;
+            this.cbb_tk_vbdi_svb.Location = new System.Drawing.Point(145, 70);
+            this.cbb_tk_vbdi_svb.Name = "cbb_tk_vbdi_svb";
+            this.cbb_tk_vbdi_svb.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbdi_svb.TabIndex = 9;
+            // 
+            // dtp_tk_vbdi_to
+            // 
+            this.dtp_tk_vbdi_to.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_tk_vbdi_to.Location = new System.Drawing.Point(398, 23);
+            this.dtp_tk_vbdi_to.Name = "dtp_tk_vbdi_to";
+            this.dtp_tk_vbdi_to.Size = new System.Drawing.Size(158, 21);
+            this.dtp_tk_vbdi_to.TabIndex = 8;
+            this.dtp_tk_vbdi_to.ValueChanged += new System.EventHandler(this.dtp_tk_vbdi_to_ValueChanged);
+            // 
+            // dtp_tk_vbdi_from
+            // 
+            this.dtp_tk_vbdi_from.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_tk_vbdi_from.Location = new System.Drawing.Point(145, 25);
+            this.dtp_tk_vbdi_from.Name = "dtp_tk_vbdi_from";
+            this.dtp_tk_vbdi_from.Size = new System.Drawing.Size(158, 21);
+            this.dtp_tk_vbdi_from.TabIndex = 7;
+            this.dtp_tk_vbdi_from.ValueChanged += new System.EventHandler(this.dtp_tk_vbdi_from_ValueChanged);
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(592, 76);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(51, 13);
+            this.label74.TabIndex = 6;
+            this.label74.Text = "Trích yếu";
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(343, 121);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(49, 13);
+            this.label73.TabIndex = 5;
+            this.label73.Text = "Nơi nhận";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(59, 121);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(68, 13);
+            this.label72.TabIndex = 4;
+            this.label72.Text = "Loại văn bản";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(336, 76);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(56, 13);
+            this.label71.TabIndex = 3;
+            this.label71.Text = "Số ký hiệu";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(340, 31);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(52, 13);
+            this.label69.TabIndex = 2;
+            this.label69.Text = "đến ngày";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(66, 78);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(61, 13);
+            this.label68.TabIndex = 1;
+            this.label68.Text = "Sổ văn bản";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(6, 31);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(121, 13);
+            this.label63.TabIndex = 0;
+            this.label63.Text = "Ngày ban hành từ ngày";
+            // 
+            // mts_tk_vbdi
+            // 
+            this.mts_tk_vbdi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mts_tk_vbdi.Location = new System.Drawing.Point(0, 0);
+            this.mts_tk_vbdi.Name = "mts_tk_vbdi";
+            this.mts_tk_vbdi.Size = new System.Drawing.Size(1090, 24);
+            this.mts_tk_vbdi.TabIndex = 0;
+            this.mts_tk_vbdi.Load += new System.EventHandler(this.mts_tk_vbdi_Load);
+            // 
             // tab_tk_vanbanden
             // 
+            this.tab_tk_vanbanden.Controls.Add(this.groupBox18);
+            this.tab_tk_vanbanden.Controls.Add(this.groupBox17);
+            this.tab_tk_vanbanden.Controls.Add(this.mts_tk_vbden);
             this.tab_tk_vanbanden.Name = "tab_tk_vanbanden";
             this.tab_tk_vanbanden.PageVisible = false;
             this.tab_tk_vanbanden.Size = new System.Drawing.Size(1090, 711);
             this.tab_tk_vanbanden.Text = "Thống kê văn bản đến";
             // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.dgv_tk_vbden);
+            this.groupBox18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox18.Location = new System.Drawing.Point(0, 198);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(1090, 513);
+            this.groupBox18.TabIndex = 3;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Danh sách tìm kiếm";
+            // 
+            // dgv_tk_vbden
+            // 
+            this.dgv_tk_vbden.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_tk_vbden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tk_vbden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22});
+            this.dgv_tk_vbden.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tk_vbden.Location = new System.Drawing.Point(3, 17);
+            this.dgv_tk_vbden.MultiSelect = false;
+            this.dgv_tk_vbden.Name = "dgv_tk_vbden";
+            this.dgv_tk_vbden.ReadOnly = true;
+            this.dgv_tk_vbden.Size = new System.Drawing.Size(1084, 493);
+            this.dgv_tk_vbden.TabIndex = 4;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn14.HeaderText = "ID văn bản đên";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "loaivanban";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Loại văn bản";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "sovanban";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Sổ văn bản";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "sokyhieu";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Số ký hiệu";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "soden";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Số đến";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "ngaybanhanh";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Ngày ban hành";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "ngayden";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Ngày đến";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "donvigui";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Đơn vị gửi";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "trichyeu";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Trích yếu";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.cbb_tk_vbden_nbh);
+            this.groupBox17.Controls.Add(this.btn_tk_vbden_in);
+            this.groupBox17.Controls.Add(this.btn_tk_vbden_tim);
+            this.groupBox17.Controls.Add(this.txt_tk_vbden_trichyeu);
+            this.groupBox17.Controls.Add(this.txt_tk_vbden_sokyhieu);
+            this.groupBox17.Controls.Add(this.cbb_tk_vbden_lvb);
+            this.groupBox17.Controls.Add(this.cbb_tk_vbden_svb);
+            this.groupBox17.Controls.Add(this.dtp_tk_vbden_to);
+            this.groupBox17.Controls.Add(this.dtp_tk_vbden_from);
+            this.groupBox17.Controls.Add(this.label75);
+            this.groupBox17.Controls.Add(this.label76);
+            this.groupBox17.Controls.Add(this.label77);
+            this.groupBox17.Controls.Add(this.label78);
+            this.groupBox17.Controls.Add(this.label79);
+            this.groupBox17.Controls.Add(this.label80);
+            this.groupBox17.Controls.Add(this.label81);
+            this.groupBox17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox17.Location = new System.Drawing.Point(0, 24);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(1090, 174);
+            this.groupBox17.TabIndex = 2;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Tìm kiếm văn bản đến";
+            // 
+            // cbb_tk_vbden_nbh
+            // 
+            this.cbb_tk_vbden_nbh.FormattingEnabled = true;
+            this.cbb_tk_vbden_nbh.Location = new System.Drawing.Point(398, 113);
+            this.cbb_tk_vbden_nbh.Name = "cbb_tk_vbden_nbh";
+            this.cbb_tk_vbden_nbh.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbden_nbh.TabIndex = 16;
+            // 
+            // btn_tk_vbden_in
+            // 
+            this.btn_tk_vbden_in.Location = new System.Drawing.Point(811, 26);
+            this.btn_tk_vbden_in.Name = "btn_tk_vbden_in";
+            this.btn_tk_vbden_in.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbden_in.TabIndex = 15;
+            this.btn_tk_vbden_in.Text = "Thống kê";
+            this.btn_tk_vbden_in.UseVisualStyleBackColor = true;
+            this.btn_tk_vbden_in.Click += new System.EventHandler(this.btn_tk_vbden_in_Click);
+            // 
+            // btn_tk_vbden_tim
+            // 
+            this.btn_tk_vbden_tim.Location = new System.Drawing.Point(687, 26);
+            this.btn_tk_vbden_tim.Name = "btn_tk_vbden_tim";
+            this.btn_tk_vbden_tim.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbden_tim.TabIndex = 14;
+            this.btn_tk_vbden_tim.Text = "Tìm kiếm";
+            this.btn_tk_vbden_tim.UseVisualStyleBackColor = true;
+            this.btn_tk_vbden_tim.Click += new System.EventHandler(this.btn_tk_vbden_tim_Click);
+            // 
+            // txt_tk_vbden_trichyeu
+            // 
+            this.txt_tk_vbden_trichyeu.Location = new System.Drawing.Point(647, 70);
+            this.txt_tk_vbden_trichyeu.Name = "txt_tk_vbden_trichyeu";
+            this.txt_tk_vbden_trichyeu.Size = new System.Drawing.Size(425, 64);
+            this.txt_tk_vbden_trichyeu.TabIndex = 13;
+            this.txt_tk_vbden_trichyeu.Text = "";
+            // 
+            // txt_tk_vbden_sokyhieu
+            // 
+            this.txt_tk_vbden_sokyhieu.Location = new System.Drawing.Point(398, 70);
+            this.txt_tk_vbden_sokyhieu.Name = "txt_tk_vbden_sokyhieu";
+            this.txt_tk_vbden_sokyhieu.Size = new System.Drawing.Size(158, 21);
+            this.txt_tk_vbden_sokyhieu.TabIndex = 11;
+            // 
+            // cbb_tk_vbden_lvb
+            // 
+            this.cbb_tk_vbden_lvb.FormattingEnabled = true;
+            this.cbb_tk_vbden_lvb.Location = new System.Drawing.Point(145, 113);
+            this.cbb_tk_vbden_lvb.Name = "cbb_tk_vbden_lvb";
+            this.cbb_tk_vbden_lvb.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbden_lvb.TabIndex = 10;
+            // 
+            // cbb_tk_vbden_svb
+            // 
+            this.cbb_tk_vbden_svb.FormattingEnabled = true;
+            this.cbb_tk_vbden_svb.Location = new System.Drawing.Point(145, 70);
+            this.cbb_tk_vbden_svb.Name = "cbb_tk_vbden_svb";
+            this.cbb_tk_vbden_svb.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbden_svb.TabIndex = 9;
+            // 
+            // dtp_tk_vbden_to
+            // 
+            this.dtp_tk_vbden_to.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_tk_vbden_to.Location = new System.Drawing.Point(398, 23);
+            this.dtp_tk_vbden_to.Name = "dtp_tk_vbden_to";
+            this.dtp_tk_vbden_to.Size = new System.Drawing.Size(158, 21);
+            this.dtp_tk_vbden_to.TabIndex = 8;
+            this.dtp_tk_vbden_to.ValueChanged += new System.EventHandler(this.dtp_tk_vbden_to_ValueChanged);
+            // 
+            // dtp_tk_vbden_from
+            // 
+            this.dtp_tk_vbden_from.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_tk_vbden_from.Location = new System.Drawing.Point(145, 25);
+            this.dtp_tk_vbden_from.Name = "dtp_tk_vbden_from";
+            this.dtp_tk_vbden_from.Size = new System.Drawing.Size(158, 21);
+            this.dtp_tk_vbden_from.TabIndex = 7;
+            this.dtp_tk_vbden_from.ValueChanged += new System.EventHandler(this.dtp_tk_vbden_from_ValueChanged);
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(592, 76);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(51, 13);
+            this.label75.TabIndex = 6;
+            this.label75.Text = "Trích yếu";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(322, 121);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(70, 13);
+            this.label76.TabIndex = 5;
+            this.label76.Text = "Nơi ban hành";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(59, 121);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(68, 13);
+            this.label77.TabIndex = 4;
+            this.label77.Text = "Loại văn bản";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(336, 76);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(56, 13);
+            this.label78.TabIndex = 3;
+            this.label78.Text = "Số ký hiệu";
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(340, 31);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(52, 13);
+            this.label79.TabIndex = 2;
+            this.label79.Text = "đến ngày";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(66, 78);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(61, 13);
+            this.label80.TabIndex = 1;
+            this.label80.Text = "Sổ văn bản";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(33, 31);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(94, 13);
+            this.label81.TabIndex = 0;
+            this.label81.Text = "Ngày đến từ ngày";
+            // 
+            // mts_tk_vbden
+            // 
+            this.mts_tk_vbden.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mts_tk_vbden.Location = new System.Drawing.Point(0, 0);
+            this.mts_tk_vbden.Name = "mts_tk_vbden";
+            this.mts_tk_vbden.Size = new System.Drawing.Size(1090, 24);
+            this.mts_tk_vbden.TabIndex = 1;
+            this.mts_tk_vbden.Load += new System.EventHandler(this.mts_tk_vbden_Load);
+            // 
             // tab_tk_vanbannoibo
             // 
+            this.tab_tk_vanbannoibo.Controls.Add(this.groupBox20);
+            this.tab_tk_vanbannoibo.Controls.Add(this.groupBox19);
+            this.tab_tk_vanbannoibo.Controls.Add(this.mts_tk_vbnb);
             this.tab_tk_vanbannoibo.Name = "tab_tk_vanbannoibo";
             this.tab_tk_vanbannoibo.PageVisible = false;
             this.tab_tk_vanbannoibo.Size = new System.Drawing.Size(1090, 711);
             this.tab_tk_vanbannoibo.Text = "Thống kê văn bản nội bộ";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.dgv_tk_vbnb);
+            this.groupBox20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox20.Location = new System.Drawing.Point(0, 198);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(1090, 513);
+            this.groupBox20.TabIndex = 4;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Danh sách tìm kiếm";
+            // 
+            // dgv_tk_vbnb
+            // 
+            this.dgv_tk_vbnb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_tk_vbnb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tk_vbnb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30});
+            this.dgv_tk_vbnb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tk_vbnb.Location = new System.Drawing.Point(3, 17);
+            this.dgv_tk_vbnb.MultiSelect = false;
+            this.dgv_tk_vbnb.Name = "dgv_tk_vbnb";
+            this.dgv_tk_vbnb.ReadOnly = true;
+            this.dgv_tk_vbnb.Size = new System.Drawing.Size(1084, 493);
+            this.dgv_tk_vbnb.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn23.HeaderText = "ID văn bản";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "tenvanban";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Tên văn bản";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "loaivanban";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Loại văn bản";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.HeaderText = "Số ký hiệu";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "ngaybanhanh";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Ngày ban hành";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "phongbannhan";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Phòng ban nhận";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "phongbanhanh";
+            this.dataGridViewTextBoxColumn29.HeaderText = "Phòng ban hành";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "trichyeu";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Trích yếu";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.label89);
+            this.groupBox19.Controls.Add(this.label87);
+            this.groupBox19.Controls.Add(this.cbb_tk_vbnb_pbn);
+            this.groupBox19.Controls.Add(this.btn_tk_vbnb_in);
+            this.groupBox19.Controls.Add(this.btn_tk_vbnb_tim);
+            this.groupBox19.Controls.Add(this.txt_tk_vbnb_trichyeu);
+            this.groupBox19.Controls.Add(this.txt_tk_vbnb_tenvb);
+            this.groupBox19.Controls.Add(this.txt_tk_vbnb_sokyhieu);
+            this.groupBox19.Controls.Add(this.cbb_tk_vbnb_pbh);
+            this.groupBox19.Controls.Add(this.cbb_tk_vbnb_lvb);
+            this.groupBox19.Controls.Add(this.dtp_tk_vbnb_to);
+            this.groupBox19.Controls.Add(this.dtp_tk_vbnb_from);
+            this.groupBox19.Controls.Add(this.label82);
+            this.groupBox19.Controls.Add(this.label83);
+            this.groupBox19.Controls.Add(this.label84);
+            this.groupBox19.Controls.Add(this.label85);
+            this.groupBox19.Controls.Add(this.label86);
+            this.groupBox19.Controls.Add(this.label88);
+            this.groupBox19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox19.Location = new System.Drawing.Point(0, 24);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(1090, 174);
+            this.groupBox19.TabIndex = 2;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Tìm kiếm văn bản nội bộ";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(42, 140);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(85, 13);
+            this.label89.TabIndex = 18;
+            this.label89.Text = "Phòng ban nhận";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(42, 103);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(85, 13);
+            this.label87.TabIndex = 17;
+            this.label87.Text = "Phòng ban hành";
+            // 
+            // cbb_tk_vbnb_pbn
+            // 
+            this.cbb_tk_vbnb_pbn.FormattingEnabled = true;
+            this.cbb_tk_vbnb_pbn.Location = new System.Drawing.Point(145, 132);
+            this.cbb_tk_vbnb_pbn.Name = "cbb_tk_vbnb_pbn";
+            this.cbb_tk_vbnb_pbn.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbnb_pbn.TabIndex = 16;
+            // 
+            // btn_tk_vbnb_in
+            // 
+            this.btn_tk_vbnb_in.Location = new System.Drawing.Point(811, 26);
+            this.btn_tk_vbnb_in.Name = "btn_tk_vbnb_in";
+            this.btn_tk_vbnb_in.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbnb_in.TabIndex = 15;
+            this.btn_tk_vbnb_in.Text = "Thống kê";
+            this.btn_tk_vbnb_in.UseVisualStyleBackColor = true;
+            this.btn_tk_vbnb_in.Click += new System.EventHandler(this.btn_tk_vbnb_in_Click);
+            // 
+            // btn_tk_vbnb_tim
+            // 
+            this.btn_tk_vbnb_tim.Location = new System.Drawing.Point(687, 26);
+            this.btn_tk_vbnb_tim.Name = "btn_tk_vbnb_tim";
+            this.btn_tk_vbnb_tim.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbnb_tim.TabIndex = 14;
+            this.btn_tk_vbnb_tim.Text = "Tìm kiếm";
+            this.btn_tk_vbnb_tim.UseVisualStyleBackColor = true;
+            this.btn_tk_vbnb_tim.Click += new System.EventHandler(this.btn_tk_vbnb_tim_Click);
+            // 
+            // txt_tk_vbnb_trichyeu
+            // 
+            this.txt_tk_vbnb_trichyeu.Location = new System.Drawing.Point(647, 70);
+            this.txt_tk_vbnb_trichyeu.Name = "txt_tk_vbnb_trichyeu";
+            this.txt_tk_vbnb_trichyeu.Size = new System.Drawing.Size(425, 83);
+            this.txt_tk_vbnb_trichyeu.TabIndex = 13;
+            this.txt_tk_vbnb_trichyeu.Text = "";
+            // 
+            // txt_tk_vbnb_tenvb
+            // 
+            this.txt_tk_vbnb_tenvb.Location = new System.Drawing.Point(398, 95);
+            this.txt_tk_vbnb_tenvb.Name = "txt_tk_vbnb_tenvb";
+            this.txt_tk_vbnb_tenvb.Size = new System.Drawing.Size(158, 21);
+            this.txt_tk_vbnb_tenvb.TabIndex = 12;
+            // 
+            // txt_tk_vbnb_sokyhieu
+            // 
+            this.txt_tk_vbnb_sokyhieu.Location = new System.Drawing.Point(398, 60);
+            this.txt_tk_vbnb_sokyhieu.Name = "txt_tk_vbnb_sokyhieu";
+            this.txt_tk_vbnb_sokyhieu.Size = new System.Drawing.Size(158, 21);
+            this.txt_tk_vbnb_sokyhieu.TabIndex = 11;
+            // 
+            // cbb_tk_vbnb_pbh
+            // 
+            this.cbb_tk_vbnb_pbh.FormattingEnabled = true;
+            this.cbb_tk_vbnb_pbh.Location = new System.Drawing.Point(145, 95);
+            this.cbb_tk_vbnb_pbh.Name = "cbb_tk_vbnb_pbh";
+            this.cbb_tk_vbnb_pbh.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbnb_pbh.TabIndex = 10;
+            // 
+            // cbb_tk_vbnb_lvb
+            // 
+            this.cbb_tk_vbnb_lvb.FormattingEnabled = true;
+            this.cbb_tk_vbnb_lvb.Location = new System.Drawing.Point(145, 60);
+            this.cbb_tk_vbnb_lvb.Name = "cbb_tk_vbnb_lvb";
+            this.cbb_tk_vbnb_lvb.Size = new System.Drawing.Size(158, 21);
+            this.cbb_tk_vbnb_lvb.TabIndex = 9;
+            // 
+            // dtp_tk_vbnb_to
+            // 
+            this.dtp_tk_vbnb_to.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_tk_vbnb_to.Location = new System.Drawing.Point(398, 23);
+            this.dtp_tk_vbnb_to.Name = "dtp_tk_vbnb_to";
+            this.dtp_tk_vbnb_to.Size = new System.Drawing.Size(158, 21);
+            this.dtp_tk_vbnb_to.TabIndex = 8;
+            this.dtp_tk_vbnb_to.ValueChanged += new System.EventHandler(this.dtp_tk_vbnb_to_ValueChanged);
+            // 
+            // dtp_tk_vbnb_from
+            // 
+            this.dtp_tk_vbnb_from.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_tk_vbnb_from.Location = new System.Drawing.Point(145, 25);
+            this.dtp_tk_vbnb_from.Name = "dtp_tk_vbnb_from";
+            this.dtp_tk_vbnb_from.Size = new System.Drawing.Size(158, 21);
+            this.dtp_tk_vbnb_from.TabIndex = 7;
+            this.dtp_tk_vbnb_from.ValueChanged += new System.EventHandler(this.dtp_tk_vbnb_from_ValueChanged);
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(592, 76);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(51, 13);
+            this.label82.TabIndex = 6;
+            this.label82.Text = "Trích yếu";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(325, 103);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(67, 13);
+            this.label83.TabIndex = 5;
+            this.label83.Text = "Tên văn bản";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(59, 68);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(68, 13);
+            this.label84.TabIndex = 4;
+            this.label84.Text = "Loại văn bản";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(336, 68);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(56, 13);
+            this.label85.TabIndex = 3;
+            this.label85.Text = "Số ký hiệu";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(340, 31);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(52, 13);
+            this.label86.TabIndex = 2;
+            this.label86.Text = "đến ngày";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(6, 31);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(121, 13);
+            this.label88.TabIndex = 0;
+            this.label88.Text = "Ngày ban hành từ ngày";
+            // 
+            // mts_tk_vbnb
+            // 
+            this.mts_tk_vbnb.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mts_tk_vbnb.Location = new System.Drawing.Point(0, 0);
+            this.mts_tk_vbnb.Name = "mts_tk_vbnb";
+            this.mts_tk_vbnb.Size = new System.Drawing.Size(1090, 24);
+            this.mts_tk_vbnb.TabIndex = 1;
+            this.mts_tk_vbnb.Load += new System.EventHandler(this.mts_tk_vbnb_Load);
             // 
             // frm_Main
             // 
@@ -4145,6 +5288,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dsvbnoibo)).EndInit();
             this.gb_dsvbnoibo.ResumeLayout(false);
             this.gb_dsvbnoibo.PerformLayout();
+            this.tab_tk_vanbandi.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tk_vbdi)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.tab_tk_vanbanden.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tk_vbden)).EndInit();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.tab_tk_vanbannoibo.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tk_vbnb)).EndInit();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4397,7 +5555,6 @@
         private System.Windows.Forms.Button btn_vbden_deletefile;
         private System.Windows.Forms.Button btn_vbden_readfile;
         private System.Windows.Forms.Button btn_vbden_addfile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_VBDEN;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.RichTextBox txt_vbdi_trichyeu;
         private System.Windows.Forms.GroupBox gb_vbdi;
@@ -4502,5 +5659,117 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CHUC_NANG;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_CHUC_NANG;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ACCESS;
+        private MyTools.MyToolStrip mts_tk_vbdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_VBDEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LOAI_VAN_BAN_DEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_VAN_BAN_DEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_KY_HIEU_DEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_DEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAY_BAN_HANH_DEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAY_DEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DON_VI_GUI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRICH_YEU_DEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_VBDI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_VAN_BAN_DI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LOAI_VAN_BAN_DI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_DI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_KY_HIEU_DI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAY_BAN_HANH_DI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOI_NHAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRICH_YEU_DI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_VBNB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEN_VAN_BAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LOAI_VAN_BAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_KY_HIEU_NB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAY_BAN_HANH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PHONG_BAN_NHAN_NB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PHONG_BAN_HANH_NB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRICH_YEU_NB;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.DataGridView dgv_tk_vbdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button btn_tk_vbdi_in;
+        private System.Windows.Forms.Button btn_tk_vbdi_tim;
+        private System.Windows.Forms.RichTextBox txt_tk_vbdi_trichyeu;
+        private System.Windows.Forms.TextBox txt_tk_vbdi_noinhan;
+        private System.Windows.Forms.TextBox txt_tk_vbdi_sokyhieu;
+        private System.Windows.Forms.ComboBox cbb_tk_vbdi_lvb;
+        private System.Windows.Forms.ComboBox cbb_tk_vbdi_svb;
+        private System.Windows.Forms.DateTimePicker dtp_tk_vbdi_to;
+        private System.Windows.Forms.DateTimePicker dtp_tk_vbdi_from;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.DataGridView dgv_tk_vbden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Button btn_tk_vbden_in;
+        private System.Windows.Forms.Button btn_tk_vbden_tim;
+        private System.Windows.Forms.RichTextBox txt_tk_vbden_trichyeu;
+        private System.Windows.Forms.TextBox txt_tk_vbden_sokyhieu;
+        private System.Windows.Forms.ComboBox cbb_tk_vbden_lvb;
+        private System.Windows.Forms.ComboBox cbb_tk_vbden_svb;
+        private System.Windows.Forms.DateTimePicker dtp_tk_vbden_to;
+        private System.Windows.Forms.DateTimePicker dtp_tk_vbden_from;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private MyTools.MyToolStrip mts_tk_vbden;
+        private System.Windows.Forms.ComboBox cbb_tk_vbden_nbh;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.DataGridView dgv_tk_vbnb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.ComboBox cbb_tk_vbnb_pbn;
+        private System.Windows.Forms.Button btn_tk_vbnb_in;
+        private System.Windows.Forms.Button btn_tk_vbnb_tim;
+        private System.Windows.Forms.RichTextBox txt_tk_vbnb_trichyeu;
+        private System.Windows.Forms.TextBox txt_tk_vbnb_tenvb;
+        private System.Windows.Forms.TextBox txt_tk_vbnb_sokyhieu;
+        private System.Windows.Forms.ComboBox cbb_tk_vbnb_pbh;
+        private System.Windows.Forms.ComboBox cbb_tk_vbnb_lvb;
+        private System.Windows.Forms.DateTimePicker dtp_tk_vbnb_to;
+        private System.Windows.Forms.DateTimePicker dtp_tk_vbnb_from;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label88;
+        private MyTools.MyToolStrip mts_tk_vbnb;
     }
 }

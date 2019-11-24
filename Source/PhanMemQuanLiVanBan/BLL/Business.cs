@@ -662,5 +662,24 @@ namespace BLL
             }
             return false;
         }
+         //THỐNG KÊ VĂN BẢN ĐI=====================================================
+        public List<VanBanDiObject> getThongKeVBDi(DateTime date_from, DateTime date_to, int[] id, string[] thongtin)
+        {
+            List<VanBanDiObject> result = da.getThongKeVBDi(date_from, date_to,id, thongtin).ToList();
+            
+            return result;
+        }
+         //THỐNG KÊ VĂN BẢN ĐẾN=============================================
+        public List<VanBanDenObject> getThongKeVBDen(DateTime date_from, DateTime date_to, int[] id, string[] thongtin)
+        {
+            List<VanBanDenObject> result = da.getThongKeVBDen(date_from, date_to, id, thongtin).ToList();
+            return result;
+        }
+         //THỐNG KÊ VĂN BẢN NỘI BỘ===========================================
+        public List<VanBanNoiBoObject> getThongKeVBNB(DateTime date_from, DateTime date_to, int[] id, string[] thongtin)
+        {
+            List<VanBanNoiBoObject> result = da.getThongKeVBNB(date_from, date_to, id, thongtin).ToList();
+            return result;
+        }
     }
 }

@@ -629,7 +629,165 @@ namespace DAL
             }
             return result;
         }
+        //Thống kê văn bản đi====================================================================
+        public IQueryable<VanBanDiObject> getThongKeVBDi(DateTime date_from, DateTime date_to,int[] id, string[] thongtin)
+        {
+            IQueryable<VAN_BAN_DI> a, b, c;
+            IQueryable<VanBanDiObject> d;
+            a = from vbd in qlvb.VAN_BAN_DIs
+                where vbd.NGAY_BAN_HANH >= date_from && vbd.NGAY_BAN_HANH <= date_to && vbd.SO_KY_HIEU.Contains(thongtin[0]) && vbd.NOI_NHAN.Contains(thongtin[1]) && vbd.TRICH_YEU.Contains(thongtin[2])
+                select vbd;
+            if (id[0] != -1)
+            {
+                b = from vbd in a
+                    where (vbd.ID_LOAI_VAN_BAN == id[0])
+                    select vbd;
+            }
+            else
+            {
+                b = a;
+            }
+            if (id[1] != -1)
+            {
+                c = from vbd in b
+                    where (vbd.ID_SO_VAN_BAN == id[1])
+                    select vbd;
+            }
+            else
+            {
+                c = b;
+            }
+            d = from vbd in c
+                    join lvb in qlvb.LOAI_VAN_BANs on vbd.ID_LOAI_VAN_BAN equals lvb.ID_LOAI_VAN_BAN
+                    join svb in qlvb.SO_VAN_BANs on vbd.ID_SO_VAN_BAN equals svb.ID_SO_VAN_BAN
+                    select new VanBanDiObject
+                    {
+                        id = vbd.ID_VAN_BAN,
+                        sovanban = svb.TEN_SO_VAN_BAN,
+                        loaivanban = lvb.TEN_LOAI_VAN_BAN,
+                        sokyhieu = vbd.SO_KY_HIEU,
+                        sodi = int.Parse(vbd.SO_DI.ToString()),
+                        ngaybanhanh = DateTime.Parse(vbd.NGAY_BAN_HANH.ToString()),
+                        noinhan = vbd.NOI_NHAN,
+                        trichyeu = vbd.TRICH_YEU
+                    };
+            return d;
+        }
 
+        
+        //Thống kê văn bản đến=========================================================================
+        
+        public IQueryable<VanBanDenObject> getThongKeVBDen(DateTime date_from, DateTime date_to, int[] id, string[] thongtin)
+        {
+            IQueryable<VAN_BAN_DEN> a, b, c, d;
+            IQueryable<VanBanDenObject> e;
+            a = from vbd in qlvb.VAN_BAN_DENs
+                    where vbd.NGAY_DEN >= date_from && vbd.NGAY_DEN <= date_to && vbd.SO_KY_HIEU.Contains(thongtin[0]) && vbd.TRICH_YEU.Contains(thongtin[1])
+                    select vbd;
+            if (id[0] != -1)
+            {
+                b = from vbd in a
+                    where vbd.ID_SO_VAN_BAN == id[0]
+                    select vbd;
+            }
+            else
+            {
+                b = a;
+            }
+            if (id[1] != -1)
+            {
+                c = from vbd in b
+                    where vbd.ID_LOAI_VAN_BAN == id[1]
+                    select vbd;
+            }
+            else
+            {
+                c = b;
+            }
+            if (id[2] != -1)
+            {
+                d = from vbd in c
+                    where vbd.ID_DON_VI_DEN == id[2]
+                    select vbd;
+            }
+            else
+            {
+                d = c;
+            }
+            e = from vbd in d
+                join lvb in qlvb.LOAI_VAN_BANs on vbd.ID_LOAI_VAN_BAN equals lvb.ID_LOAI_VAN_BAN
+                join svb in qlvb.SO_VAN_BANs on vbd.ID_SO_VAN_BAN equals svb.ID_SO_VAN_BAN
+                join nbh in qlvb.NOI_BAN_HANHs on vbd.ID_DON_VI_DEN equals nbh.ID_NOI_BAN_HANH
+                select new VanBanDenObject
+                {
+                    id = vbd.ID_VAN_BAN_DEN,
+                    sovanban = svb.TEN_SO_VAN_BAN,
+                    loaivanban = lvb.TEN_LOAI_VAN_BAN,
+                    donvigui = nbh.NOI_BAN_HANH1,
+                    sokyhieu = vbd.SO_KY_HIEU,
+                    soden = int.Parse(vbd.SO_DEN.ToString()),
+                    ngayden = DateTime.Parse(vbd.NGAY_DEN.ToString()),
+                    ngaybanhanh = DateTime.Parse(vbd.NGAY_BAN_HANH.ToString()),
+                    trichyeu = vbd.TRICH_YEU
+                };
+                    
+            return e;
+        }
+        //Thống kê văn bản nội bộ
+        public IQueryable<VanBanNoiBoObject> getThongKeVBNB(DateTime date_from, DateTime date_to, int[] id, string[] thongtin)
+        {
+            IQueryable<VAN_BAN_NOI_BO> a, b, c, d;
+            IQueryable<VanBanNoiBoObject> e;
+            a = from vbd in qlvb.VAN_BAN_NOI_BOs
+                where vbd.NGAY_BAN_HANH >= date_from && vbd.NGAY_BAN_HANH <= date_to && vbd.SO_KY_HIEU.Contains(thongtin[0]) && vbd.TEN_VAN_BAN.Contains(thongtin[1]) && vbd.TRICH_YEU.Contains(thongtin[2])
+                select vbd;
+            if (id[0] != -1)
+            {
+                b = from vbd in a
+                    where vbd.ID_LOAI_VAN_BAN == id[0]
+                    select vbd;
+            }
+            else
+            {
+                b = a;
+            }
+            if (id[1] != -1)
+            {
+                c = from vbd in b
+                    where vbd.ID_PHONG_BAN_BAN_HANH == id[1]
+                    select vbd;
+            }
+            else
+            {
+                c = b;
+            }
+            if (id[2] != -1)
+            {
+                d = from vbd in c
+                    where vbd.ID_PHONG_BAN_NHAN == id[2]
+                    select vbd;
+            }
+            else
+            {
+                d = c;
+            }
+            e = from vbd in d
+                join lvb in qlvb.LOAI_VAN_BANs on vbd.ID_LOAI_VAN_BAN equals lvb.ID_LOAI_VAN_BAN
+                join pbn in qlvb.PHONG_BANs on vbd.ID_PHONG_BAN_NHAN equals pbn.ID_PHONG_BAN
+                join pbh in qlvb.PHONG_BANs on vbd.ID_PHONG_BAN_BAN_HANH equals pbh.ID_PHONG_BAN
+                select new VanBanNoiBoObject
+                {
+                    id = vbd.ID_VAN_BAN_NOI_BO,
+                    loaivanban = lvb.TEN_LOAI_VAN_BAN,
+                    tenvanban=vbd.TEN_VAN_BAN,
+                    phongbanhanh=pbh.TEN_PHONG_BAN,
+                    phongbannhan=pbn.TEN_PHONG_BAN,
+                    sokyhieu = vbd.SO_KY_HIEU,
+                    ngaybanhanh = DateTime.Parse(vbd.NGAY_BAN_HANH.ToString()),
+                    trichyeu = vbd.TRICH_YEU
+                };
 
+            return e;
+        }
     }
 }

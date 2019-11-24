@@ -24,6 +24,7 @@ namespace PhanMemQuanLiVanBan
         {
             frm_KetNoiDatabase database = new frm_KetNoiDatabase();
             database.ShowDialog();
+            Status = Check_Config();
             cbb_congty_DropDown(sender, e);
         }
         //=========================================================================

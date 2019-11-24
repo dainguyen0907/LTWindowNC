@@ -136,7 +136,7 @@ namespace MyTools
             {
                 int m = data.CurrentCell.ColumnIndex;
                 data.CurrentRow.Selected = false;
-                data.CurrentCell = data.Rows[data.RowCount - 2].Cells[m];
+                data.CurrentCell = data.Rows[data.RowCount - 1].Cells[m];
                 data.CurrentCell.Selected = true;
             }
             else
