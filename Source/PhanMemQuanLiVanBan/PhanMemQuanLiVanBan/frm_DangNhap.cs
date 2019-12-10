@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using MyTools;
+using DAL;
 namespace PhanMemQuanLiVanBan
 {
     public partial class frm_DangNhap : Form
@@ -76,8 +77,15 @@ namespace PhanMemQuanLiVanBan
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
             if (Status == 1 || Status == 2)
+            {
                 MessageBox.Show("Kêt nối bị lỗi. Vui lòng thiết lập lại kết nối!", "Thông báo", MessageBoxButtons.OK);
-            cbb_congty_DropDown(sender, e);
+            }
+            else
+            {
+                ConnectionString n = new ConnectionString();
+                n.setConnectionString(Properties.Settings.Default.Connect);
+                cbb_congty_DropDown(sender, e);
+            }
 
         }
         //===========================================================================================

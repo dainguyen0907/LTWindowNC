@@ -34,6 +34,7 @@
             this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dock_thongtin = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.label90 = new System.Windows.Forms.Label();
             this.dock_chucnag = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.group_chucnang = new DevExpress.XtraEditors.GroupControl();
@@ -491,9 +492,11 @@
             this.label86 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
             this.mts_tk_vbnb = new MyTools.MyToolStrip();
+            this.label91 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.hideContainerRight.SuspendLayout();
             this.dock_thongtin.SuspendLayout();
+            this.dockPanel2_Container.SuspendLayout();
             this.dock_chucnag.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.group_chucnang)).BeginInit();
@@ -629,19 +632,32 @@
             this.dock_thongtin.ID = new System.Guid("05eeed7a-cf69-4f03-a508-569b1a370f83");
             this.dock_thongtin.Location = new System.Drawing.Point(0, 0);
             this.dock_thongtin.Name = "dock_thongtin";
-            this.dock_thongtin.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dock_thongtin.OriginalSize = new System.Drawing.Size(229, 200);
             this.dock_thongtin.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dock_thongtin.SavedIndex = 1;
-            this.dock_thongtin.Size = new System.Drawing.Size(200, 739);
+            this.dock_thongtin.Size = new System.Drawing.Size(229, 739);
             this.dock_thongtin.Text = "THÔNG TIN LIÊN HỆ";
             this.dock_thongtin.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel2_Container
             // 
+            this.dockPanel2_Container.Controls.Add(this.label91);
+            this.dockPanel2_Container.Controls.Add(this.label90);
             this.dockPanel2_Container.Location = new System.Drawing.Point(5, 23);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(191, 712);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(220, 712);
             this.dockPanel2_Container.TabIndex = 0;
+            // 
+            // label90
+            // 
+            this.label90.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label90.Location = new System.Drawing.Point(3, 15);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(215, 39);
+            this.label90.TabIndex = 0;
+            this.label90.Text = "CÔNG TY PHẦN MỀM ĐẠI THÀNH CÔNG\r\n";
+            this.label90.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dock_chucnag
             // 
@@ -1302,9 +1318,11 @@
             // 
             // btn_dsvbdi_sua
             // 
-            this.btn_dsvbdi_sua.Location = new System.Drawing.Point(709, 24);
+            this.btn_dsvbdi_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvbdi_sua.Image")));
+            this.btn_dsvbdi_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dsvbdi_sua.Location = new System.Drawing.Point(742, 24);
             this.btn_dsvbdi_sua.Name = "btn_dsvbdi_sua";
-            this.btn_dsvbdi_sua.Size = new System.Drawing.Size(75, 23);
+            this.btn_dsvbdi_sua.Size = new System.Drawing.Size(108, 23);
             this.btn_dsvbdi_sua.TabIndex = 10;
             this.btn_dsvbdi_sua.Text = "Sửa";
             this.btn_dsvbdi_sua.UseVisualStyleBackColor = true;
@@ -1312,9 +1330,11 @@
             // 
             // btn_dsvbdi_taomoi
             // 
+            this.btn_dsvbdi_taomoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvbdi_taomoi.Image")));
+            this.btn_dsvbdi_taomoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dsvbdi_taomoi.Location = new System.Drawing.Point(628, 24);
             this.btn_dsvbdi_taomoi.Name = "btn_dsvbdi_taomoi";
-            this.btn_dsvbdi_taomoi.Size = new System.Drawing.Size(75, 23);
+            this.btn_dsvbdi_taomoi.Size = new System.Drawing.Size(108, 23);
             this.btn_dsvbdi_taomoi.TabIndex = 9;
             this.btn_dsvbdi_taomoi.Text = "Tạo mới";
             this.btn_dsvbdi_taomoi.UseVisualStyleBackColor = true;
@@ -1660,9 +1680,11 @@
             // 
             // btn_phanquyen_tim
             // 
+            this.btn_phanquyen_tim.Image = ((System.Drawing.Image)(resources.GetObject("btn_phanquyen_tim.Image")));
+            this.btn_phanquyen_tim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_phanquyen_tim.Location = new System.Drawing.Point(421, 29);
             this.btn_phanquyen_tim.Name = "btn_phanquyen_tim";
-            this.btn_phanquyen_tim.Size = new System.Drawing.Size(75, 23);
+            this.btn_phanquyen_tim.Size = new System.Drawing.Size(91, 23);
             this.btn_phanquyen_tim.TabIndex = 5;
             this.btn_phanquyen_tim.Text = "Tìm";
             this.btn_phanquyen_tim.UseVisualStyleBackColor = true;
@@ -1670,9 +1692,11 @@
             // 
             // btn_huyquyen
             // 
+            this.btn_huyquyen.Image = ((System.Drawing.Image)(resources.GetObject("btn_huyquyen.Image")));
+            this.btn_huyquyen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huyquyen.Location = new System.Drawing.Point(238, 70);
             this.btn_huyquyen.Name = "btn_huyquyen";
-            this.btn_huyquyen.Size = new System.Drawing.Size(75, 23);
+            this.btn_huyquyen.Size = new System.Drawing.Size(133, 23);
             this.btn_huyquyen.TabIndex = 4;
             this.btn_huyquyen.Text = "Hủy tất cả quyền";
             this.btn_huyquyen.UseVisualStyleBackColor = true;
@@ -1767,6 +1791,8 @@
             // btn_thongtin_luu
             // 
             this.btn_thongtin_luu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_thongtin_luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_thongtin_luu.Image")));
+            this.btn_thongtin_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_thongtin_luu.Location = new System.Drawing.Point(888, 0);
             this.btn_thongtin_luu.Name = "btn_thongtin_luu";
             this.btn_thongtin_luu.Size = new System.Drawing.Size(101, 32);
@@ -1778,6 +1804,8 @@
             // btn_thongtin_thoat
             // 
             this.btn_thongtin_thoat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_thongtin_thoat.Image = ((System.Drawing.Image)(resources.GetObject("btn_thongtin_thoat.Image")));
+            this.btn_thongtin_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_thongtin_thoat.Location = new System.Drawing.Point(989, 0);
             this.btn_thongtin_thoat.Name = "btn_thongtin_thoat";
             this.btn_thongtin_thoat.Size = new System.Drawing.Size(101, 32);
@@ -2774,9 +2802,11 @@
             // 
             // btn_vbden_add
             // 
+            this.btn_vbden_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_vbden_add.Image")));
+            this.btn_vbden_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_vbden_add.Location = new System.Drawing.Point(889, 63);
             this.btn_vbden_add.Name = "btn_vbden_add";
-            this.btn_vbden_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_vbden_add.Size = new System.Drawing.Size(96, 31);
             this.btn_vbden_add.TabIndex = 25;
             this.btn_vbden_add.Text = "Tạo mới";
             this.btn_vbden_add.UseVisualStyleBackColor = true;
@@ -2784,9 +2814,11 @@
             // 
             // btn_vdben_luu
             // 
+            this.btn_vdben_luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_vdben_luu.Image")));
+            this.btn_vdben_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_vdben_luu.Location = new System.Drawing.Point(889, 29);
             this.btn_vdben_luu.Name = "btn_vdben_luu";
-            this.btn_vdben_luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_vdben_luu.Size = new System.Drawing.Size(96, 28);
             this.btn_vdben_luu.TabIndex = 24;
             this.btn_vdben_luu.Text = "Lưu";
             this.btn_vdben_luu.UseVisualStyleBackColor = true;
@@ -3240,9 +3272,11 @@
             // 
             // btn_vbdi_add
             // 
+            this.btn_vbdi_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_vbdi_add.Image")));
+            this.btn_vbdi_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_vbdi_add.Location = new System.Drawing.Point(889, 63);
             this.btn_vbdi_add.Name = "btn_vbdi_add";
-            this.btn_vbdi_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_vbdi_add.Size = new System.Drawing.Size(96, 28);
             this.btn_vbdi_add.TabIndex = 25;
             this.btn_vbdi_add.Text = "Tạo mới";
             this.btn_vbdi_add.UseVisualStyleBackColor = true;
@@ -3250,9 +3284,11 @@
             // 
             // btn_vbdi_luu
             // 
+            this.btn_vbdi_luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_vbdi_luu.Image")));
+            this.btn_vbdi_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_vbdi_luu.Location = new System.Drawing.Point(889, 29);
             this.btn_vbdi_luu.Name = "btn_vbdi_luu";
-            this.btn_vbdi_luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_vbdi_luu.Size = new System.Drawing.Size(96, 28);
             this.btn_vbdi_luu.TabIndex = 24;
             this.btn_vbdi_luu.Text = "Lưu";
             this.btn_vbdi_luu.UseVisualStyleBackColor = true;
@@ -3567,9 +3603,11 @@
             // 
             // btn_dsvbden_sua
             // 
-            this.btn_dsvbden_sua.Location = new System.Drawing.Point(711, 23);
+            this.btn_dsvbden_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvbden_sua.Image")));
+            this.btn_dsvbden_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dsvbden_sua.Location = new System.Drawing.Point(744, 23);
             this.btn_dsvbden_sua.Name = "btn_dsvbden_sua";
-            this.btn_dsvbden_sua.Size = new System.Drawing.Size(75, 23);
+            this.btn_dsvbden_sua.Size = new System.Drawing.Size(108, 23);
             this.btn_dsvbden_sua.TabIndex = 5;
             this.btn_dsvbden_sua.Text = "Sửa";
             this.btn_dsvbden_sua.UseVisualStyleBackColor = true;
@@ -3577,9 +3615,11 @@
             // 
             // btn_dsvbden_taomoi
             // 
+            this.btn_dsvbden_taomoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvbden_taomoi.Image")));
+            this.btn_dsvbden_taomoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dsvbden_taomoi.Location = new System.Drawing.Point(630, 23);
             this.btn_dsvbden_taomoi.Name = "btn_dsvbden_taomoi";
-            this.btn_dsvbden_taomoi.Size = new System.Drawing.Size(75, 23);
+            this.btn_dsvbden_taomoi.Size = new System.Drawing.Size(108, 23);
             this.btn_dsvbden_taomoi.TabIndex = 4;
             this.btn_dsvbden_taomoi.Text = "Tạo mới";
             this.btn_dsvbden_taomoi.UseVisualStyleBackColor = true;
@@ -3986,9 +4026,11 @@
             // 
             // btn_vbnb_add
             // 
+            this.btn_vbnb_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_vbnb_add.Image")));
+            this.btn_vbnb_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_vbnb_add.Location = new System.Drawing.Point(889, 63);
             this.btn_vbnb_add.Name = "btn_vbnb_add";
-            this.btn_vbnb_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_vbnb_add.Size = new System.Drawing.Size(96, 28);
             this.btn_vbnb_add.TabIndex = 25;
             this.btn_vbnb_add.Text = "Tạo mới";
             this.btn_vbnb_add.UseVisualStyleBackColor = true;
@@ -3996,9 +4038,11 @@
             // 
             // btn_vbnb_luu
             // 
+            this.btn_vbnb_luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_vbnb_luu.Image")));
+            this.btn_vbnb_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_vbnb_luu.Location = new System.Drawing.Point(889, 29);
             this.btn_vbnb_luu.Name = "btn_vbnb_luu";
-            this.btn_vbnb_luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_vbnb_luu.Size = new System.Drawing.Size(96, 28);
             this.btn_vbnb_luu.TabIndex = 24;
             this.btn_vbnb_luu.Text = "Lưu";
             this.btn_vbnb_luu.UseVisualStyleBackColor = true;
@@ -4262,9 +4306,11 @@
             // 
             // btn_dsvbnb_sua
             // 
-            this.btn_dsvbnb_sua.Location = new System.Drawing.Point(711, 24);
+            this.btn_dsvbnb_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvbnb_sua.Image")));
+            this.btn_dsvbnb_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dsvbnb_sua.Location = new System.Drawing.Point(744, 24);
             this.btn_dsvbnb_sua.Name = "btn_dsvbnb_sua";
-            this.btn_dsvbnb_sua.Size = new System.Drawing.Size(75, 23);
+            this.btn_dsvbnb_sua.Size = new System.Drawing.Size(108, 23);
             this.btn_dsvbnb_sua.TabIndex = 16;
             this.btn_dsvbnb_sua.Text = "Sửa";
             this.btn_dsvbnb_sua.UseVisualStyleBackColor = true;
@@ -4272,9 +4318,11 @@
             // 
             // btn_dsvbnb_taomoi
             // 
+            this.btn_dsvbnb_taomoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsvbnb_taomoi.Image")));
+            this.btn_dsvbnb_taomoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dsvbnb_taomoi.Location = new System.Drawing.Point(630, 24);
             this.btn_dsvbnb_taomoi.Name = "btn_dsvbnb_taomoi";
-            this.btn_dsvbnb_taomoi.Size = new System.Drawing.Size(75, 23);
+            this.btn_dsvbnb_taomoi.Size = new System.Drawing.Size(108, 23);
             this.btn_dsvbnb_taomoi.TabIndex = 14;
             this.btn_dsvbnb_taomoi.Text = "Tạo mới";
             this.btn_dsvbnb_taomoi.UseVisualStyleBackColor = true;
@@ -4452,9 +4500,11 @@
             // 
             // btn_tk_vbdi_in
             // 
-            this.btn_tk_vbdi_in.Location = new System.Drawing.Point(811, 26);
+            this.btn_tk_vbdi_in.Image = ((System.Drawing.Image)(resources.GetObject("btn_tk_vbdi_in.Image")));
+            this.btn_tk_vbdi_in.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tk_vbdi_in.Location = new System.Drawing.Point(797, 20);
             this.btn_tk_vbdi_in.Name = "btn_tk_vbdi_in";
-            this.btn_tk_vbdi_in.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbdi_in.Size = new System.Drawing.Size(118, 36);
             this.btn_tk_vbdi_in.TabIndex = 15;
             this.btn_tk_vbdi_in.Text = "Thống kê";
             this.btn_tk_vbdi_in.UseVisualStyleBackColor = true;
@@ -4462,9 +4512,11 @@
             // 
             // btn_tk_vbdi_tim
             // 
-            this.btn_tk_vbdi_tim.Location = new System.Drawing.Point(687, 26);
+            this.btn_tk_vbdi_tim.Image = ((System.Drawing.Image)(resources.GetObject("btn_tk_vbdi_tim.Image")));
+            this.btn_tk_vbdi_tim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tk_vbdi_tim.Location = new System.Drawing.Point(647, 18);
             this.btn_tk_vbdi_tim.Name = "btn_tk_vbdi_tim";
-            this.btn_tk_vbdi_tim.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbdi_tim.Size = new System.Drawing.Size(115, 38);
             this.btn_tk_vbdi_tim.TabIndex = 14;
             this.btn_tk_vbdi_tim.Text = "Tìm kiếm";
             this.btn_tk_vbdi_tim.UseVisualStyleBackColor = true;
@@ -4740,9 +4792,11 @@
             // 
             // btn_tk_vbden_in
             // 
-            this.btn_tk_vbden_in.Location = new System.Drawing.Point(811, 26);
+            this.btn_tk_vbden_in.Image = ((System.Drawing.Image)(resources.GetObject("btn_tk_vbden_in.Image")));
+            this.btn_tk_vbden_in.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tk_vbden_in.Location = new System.Drawing.Point(790, 19);
             this.btn_tk_vbden_in.Name = "btn_tk_vbden_in";
-            this.btn_tk_vbden_in.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbden_in.Size = new System.Drawing.Size(115, 38);
             this.btn_tk_vbden_in.TabIndex = 15;
             this.btn_tk_vbden_in.Text = "Thống kê";
             this.btn_tk_vbden_in.UseVisualStyleBackColor = true;
@@ -4750,9 +4804,11 @@
             // 
             // btn_tk_vbden_tim
             // 
-            this.btn_tk_vbden_tim.Location = new System.Drawing.Point(687, 26);
+            this.btn_tk_vbden_tim.Image = ((System.Drawing.Image)(resources.GetObject("btn_tk_vbden_tim.Image")));
+            this.btn_tk_vbden_tim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tk_vbden_tim.Location = new System.Drawing.Point(647, 19);
             this.btn_tk_vbden_tim.Name = "btn_tk_vbden_tim";
-            this.btn_tk_vbden_tim.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbden_tim.Size = new System.Drawing.Size(115, 38);
             this.btn_tk_vbden_tim.TabIndex = 14;
             this.btn_tk_vbden_tim.Text = "Tìm kiếm";
             this.btn_tk_vbden_tim.UseVisualStyleBackColor = true;
@@ -5032,9 +5088,11 @@
             // 
             // btn_tk_vbnb_in
             // 
-            this.btn_tk_vbnb_in.Location = new System.Drawing.Point(811, 26);
+            this.btn_tk_vbnb_in.Image = ((System.Drawing.Image)(resources.GetObject("btn_tk_vbnb_in.Image")));
+            this.btn_tk_vbnb_in.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tk_vbnb_in.Location = new System.Drawing.Point(798, 18);
             this.btn_tk_vbnb_in.Name = "btn_tk_vbnb_in";
-            this.btn_tk_vbnb_in.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbnb_in.Size = new System.Drawing.Size(115, 38);
             this.btn_tk_vbnb_in.TabIndex = 15;
             this.btn_tk_vbnb_in.Text = "Thống kê";
             this.btn_tk_vbnb_in.UseVisualStyleBackColor = true;
@@ -5042,9 +5100,11 @@
             // 
             // btn_tk_vbnb_tim
             // 
-            this.btn_tk_vbnb_tim.Location = new System.Drawing.Point(687, 26);
+            this.btn_tk_vbnb_tim.Image = ((System.Drawing.Image)(resources.GetObject("btn_tk_vbnb_tim.Image")));
+            this.btn_tk_vbnb_tim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tk_vbnb_tim.Location = new System.Drawing.Point(647, 18);
             this.btn_tk_vbnb_tim.Name = "btn_tk_vbnb_tim";
-            this.btn_tk_vbnb_tim.Size = new System.Drawing.Size(75, 23);
+            this.btn_tk_vbnb_tim.Size = new System.Drawing.Size(115, 38);
             this.btn_tk_vbnb_tim.TabIndex = 14;
             this.btn_tk_vbnb_tim.Text = "Tìm kiếm";
             this.btn_tk_vbnb_tim.UseVisualStyleBackColor = true;
@@ -5169,6 +5229,16 @@
             this.mts_tk_vbnb.TabIndex = 1;
             this.mts_tk_vbnb.Load += new System.EventHandler(this.mts_tk_vbnb_Load);
             // 
+            // label91
+            // 
+            this.label91.Location = new System.Drawing.Point(6, 56);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(207, 107);
+            this.label91.TabIndex = 1;
+            this.label91.Text = "140 Lê Trọng Tấn, Tây Thạnh, TPHCM\r\nĐiện thoại: 0123456789\r\nEmail: daithanhcong@g" +
+    "mail.com";
+            this.label91.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5183,12 +5253,14 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ VĂN BẢN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
             this.hideContainerRight.ResumeLayout(false);
             this.dock_thongtin.ResumeLayout(false);
+            this.dockPanel2_Container.ResumeLayout(false);
             this.dock_chucnag.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.group_chucnang)).EndInit();
@@ -5771,5 +5843,7 @@
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label88;
         private MyTools.MyToolStrip mts_tk_vbnb;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label91;
     }
 }

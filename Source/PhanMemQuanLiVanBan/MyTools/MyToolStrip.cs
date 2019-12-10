@@ -63,7 +63,7 @@ namespace MyTools
             }
             if (data.RowCount > 0)
             {
-                int i = int.Parse(data.Rows[data.RowCount - 2].Cells[0].Value.ToString());
+                int i = int.Parse(data.Rows[data.RowCount - 1].Cells[0].Value.ToString());
                 id.Text = (i + 1).ToString();
             }
             else
@@ -114,7 +114,7 @@ namespace MyTools
                 return;
             if (data.CurrentRow != null)
             {
-                if (data.Rows[data.RowCount - 1].Selected != true)
+                if (data.CurrentCell.RowIndex!=data.RowCount-1)
                 {
                     int d = data.CurrentCell.RowIndex;
                     int m = data.CurrentCell.ColumnIndex;

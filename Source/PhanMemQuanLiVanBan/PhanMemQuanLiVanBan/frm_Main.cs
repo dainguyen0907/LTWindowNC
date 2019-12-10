@@ -408,10 +408,15 @@ namespace PhanMemQuanLiVanBan
             {
                 int position = dgv_nhanvien.CurrentCell.RowIndex;
                 int id = int.Parse(dgv_nhanvien.Rows[position].Cells[0].Value.ToString());
+                if (bussiness.checkexsistQuyen(id))
+                {
+                    MessageBox.Show("Xóa không thành công!\n Hãy đảm bảo thông tin chưa tham chiếu đến đối tượng khác.", "THÔNG BÁO");
+                    return;
+                }
                 if (bussiness.xoaNhanVien(id))
                     MessageBox.Show("Bạn đã xóa thành công", "THÔNG BÁO");
                 else
-                    MessageBox.Show("Xóa không thành công!\n Hãy đảm bảo thông tin chưa tham chiếu đến đối tượng khác.", "THÔNG BÁO");
+                    MessageBox.Show("Xóa không thành công! Đã xảy ra lỗi trong quá trình xóa.", "THÔNG BÁO");
             }
             LoadGridViewNhanVien();
         }
@@ -431,7 +436,15 @@ namespace PhanMemQuanLiVanBan
                 String matkhau=ps.MaHoaPassword(txt_nv_matkhau.Text.ToString().Trim());
                 String tennhanvien=txt_nv_tennv.Text.ToString().Trim();
                 int id_congty=int.Parse(Program.id_congty);
-                if (bussiness.timNhanVien(id))
+                if (manhanvien == "")
+                {
+                    MessageBox.Show("Hãy nhập tài khoản!", "THÔNG BÁO");
+                }
+                else if (matkhau == "")
+                {
+                    MessageBox.Show("Hãy nhập mật khẩu", "THÔNG BÁO");
+                }
+                else if (bussiness.timNhanVien(id))
                 {
                     if (bussiness.suaNhanVien(id, manhanvien, tennhanvien, matkhau, nghiviec))
                         MessageBox.Show("Cập nhật nhân viên thành công","THÔNG BÁO");
@@ -440,14 +453,23 @@ namespace PhanMemQuanLiVanBan
                 }
                 else
                 {
-                    if(bussiness.themNhanVien(id, manhanvien, tennhanvien, matkhau, id_congty))
-                        MessageBox.Show("Thêm nhân viên thành công","THÔNG BÁO");
+                    if (!bussiness.timNhanVien(manhanvien))
+                    {
+                        if (bussiness.themNhanVien(id, manhanvien, tennhanvien, matkhau, id_congty))
+                        {
+                            MessageBox.Show("Thêm nhân viên thành công", "THÔNG BÁO");
+                            LoadGridViewNhanVien();
+                        }
+                        else
+                            MessageBox.Show("Thêm nhân viên thất bại", "THÔNG BÁO");
+                    }
                     else
-                        MessageBox.Show("Thêm nhân viên thất bại","THÔNG BÁO");
-
+                    {
+                        MessageBox.Show("Tên đăng nhập đã tồn tại, hãy tạo tài khoản khác!","THÔNG BÁO");
+                    }
                 }
             }
-            LoadGridViewNhanVien();
+            
         }
         private void LoadGridViewNhanVien()
         {
@@ -508,17 +530,21 @@ namespace PhanMemQuanLiVanBan
 
         private void btn_thongtin_luu_Click(object sender, EventArgs e)
         {
-            String ten = txt_thongtin_ten.Text;
-            String diachi = txt_thongtin_diachi.Text;
-            String dienthoai = txt_thongtin_sdt.Text;
-            String fax = txt_thongtin_fax.Text;
-            String email = txt_thongtin_email.Text;
-            String website = txt_thongtin_website.Text;
-            String masothue = txt_thongtin_mathue.Text;
-            String linhvuc = txt_thongtin_linhvuc.Text;
-            String mota = txt_thongtin_ghichu.Text;
+            String ten = txt_thongtin_ten.Text.ToString().Trim();
+            String diachi = txt_thongtin_diachi.Text.ToString().Trim();
+            String dienthoai = txt_thongtin_sdt.Text.ToString().Trim();
+            String fax = txt_thongtin_fax.Text.ToString().Trim();
+            String email = txt_thongtin_email.Text.ToString().Trim();
+            String website = txt_thongtin_website.Text.ToString().Trim();
+            String masothue = txt_thongtin_mathue.Text.ToString().Trim();
+            String linhvuc = txt_thongtin_linhvuc.Text.ToString().Trim();
+            String mota = txt_thongtin_ghichu.Text.ToString().Trim();
             String[] thongtin = { ten, diachi,dienthoai,fax,website,email,masothue,linhvuc,mota};
-            if (bussiness.suaThongTin(int.Parse(Program.id_congty), thongtin))
+            if (ten == "")
+            {
+                MessageBox.Show("Hãy nhập tên công ty", "THÔNG BÁO");
+            }
+            else if (bussiness.suaThongTin(int.Parse(Program.id_congty), thongtin))
             {
                 MessageBox.Show("Cập nhật thành công", "THÔNG BÁO");
                 LoadThongTinChung();
@@ -535,9 +561,6 @@ namespace PhanMemQuanLiVanBan
             tab_thongtin.PageVisible = false;
         }
         
-
-        //tab sổ văn bản ===============================================================================================
-
 
 
         //tab loại văn bản ================================================================================================
@@ -563,7 +586,15 @@ namespace PhanMemQuanLiVanBan
                 String maloaivanban = txt_loaivanban_maloai.Text.ToString().Trim();
                 String tenloai = txt_loaivanban_tenloai.Text.ToString().Trim();
                 String mota = txt_loaivanban_ghichu.Text.ToString().Trim();
-                if (bussiness.timLoaiVanBan(id))
+                if (maloaivanban == "")
+                {
+                    MessageBox.Show("Hãy nhập mã loại", "THÔNG BÁO");
+                }
+                else if (tenloai == "")
+                {
+                    MessageBox.Show("Hãy nhập tên loại", "THÔNG BÁO");
+                }
+                else if (bussiness.timLoaiVanBan(id))
                 {
                     if (bussiness.suaLoaiVanBan(id,maloaivanban,tenloai,mota))
                         MessageBox.Show("Cập nhật loại văn bản thành công", "THÔNG BÁO");
@@ -652,7 +683,11 @@ namespace PhanMemQuanLiVanBan
                 int id = int.Parse(txt_noibanhanh_id.Text);
                 String tennbh = txt_noibanhanh_ten.Text.ToString().Trim();
                 String mota = txt_noibanhanh_mota.Text.ToString().Trim();
-                if (bussiness.timNoiBanHanh(id))
+                if (tennbh == "")
+                {
+                    MessageBox.Show("Hãy nhập tên nơi ban hành", "THÔNG BÁO");
+                }
+                else if (bussiness.timNoiBanHanh(id))
                 {
                     if (bussiness.suaNoiBanHanh(id, tennbh, mota))
                         MessageBox.Show("Cập nhật nơi ban hành thành công", "THÔNG BÁO");
@@ -731,7 +766,11 @@ namespace PhanMemQuanLiVanBan
             {
                 int id = int.Parse(txt_phongban_id.Text);
                 String tennbh = txt_phongban_ten.Text.ToString().Trim();
-                if (bussiness.timPhongBan(id))
+                if (tennbh == "")
+                {
+                    MessageBox.Show("Hãy nhập tên phòng ban", "THÔNG BÁO");
+                }
+                else if (bussiness.timPhongBan(id))
                 {
                     if (bussiness.suaPhongBan(id, tennbh))
                         MessageBox.Show("Cập nhật nơi ban hành thành công", "THÔNG BÁO");
@@ -813,7 +852,11 @@ namespace PhanMemQuanLiVanBan
                 bool loai = false;
                 if (chk_soden.Checked == true)
                     loai = true;
-                if (bussiness.timsovanban(id))
+                if (tennbh == "")
+                {
+                    MessageBox.Show("Hãy nhập tên sổ văn bản", "THÔNG BÁO");
+                }
+                else if (bussiness.timsovanban(id))
                 {
                     if (bussiness.suasovanban(id, tennbh,loai,nam))
                         MessageBox.Show("Cập nhật sổ văn bản thành công", "THÔNG BÁO");
@@ -1001,7 +1044,27 @@ namespace PhanMemQuanLiVanBan
                     int[] _id = { svb, lvb, dvd };
                     string[] _thongtin = { sokyhieu, soden, trichyeu, ghichu, ngnhan, ngky, ngduyet, sotrang };
                     DateTime[] _ngay = { ngbanhanh, ngden };
-                    if (bussiness.SuaVanBanDen(id,_id, _thongtin, _ngay))
+                    if (sokyhieu == "")
+                    {
+                        MessageBox.Show("Hãy nhập số ký hiệu", "THÔNG BÁO");
+                    }
+                    else if (sotrang == "")
+                    {
+                        MessageBox.Show("Hãy nhập số trang", "THÔNG BÁO");
+                    }
+                    else if (ngnhan == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người nhận", "THÔNG BÁO");
+                    }
+                    else if (ngky == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người ký", "THÔNG BÁO");
+                    }
+                    else if (ngduyet == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người duyệt", "THÔNG BÁO");
+                    }
+                    else if (bussiness.SuaVanBanDen(id,_id, _thongtin, _ngay))
                     {
                         MessageBox.Show("Cập nhật thành công", "THÔNG BÁO");
                         gb_vbden_file.Enabled = true;
@@ -1036,8 +1099,28 @@ namespace PhanMemQuanLiVanBan
                     string sotrang = txt_vbden_sotrang.Text.Trim();
                     int[] _id = { id, svb, lvb, dvd };
                     string[] _thongtin = { sokyhieu, soden, trichyeu, ghichu, ngnhan, ngky, ngduyet, sotrang };
-                    DateTime[] _ngay = { ngbanhanh, ngden };
-                    if (bussiness.ThemVanBanDen(_id, _thongtin, _ngay))
+                    DateTime[] _ngay = { ngbanhanh, ngden }; 
+                    if (sokyhieu == "")
+                    {
+                        MessageBox.Show("Hãy nhập số ký hiệu", "THÔNG BÁO");
+                    }
+                    else if (sotrang == "")
+                    {
+                        MessageBox.Show("Hãy nhập số trang", "THÔNG BÁO");
+                    }
+                    else if (ngnhan == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người nhận", "THÔNG BÁO");
+                    }
+                    else if (ngky == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người ký", "THÔNG BÁO");
+                    }
+                    else if (ngduyet == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người duyệt", "THÔNG BÁO");
+                    }
+                    else if (bussiness.ThemVanBanDen(_id, _thongtin, _ngay))
                     {
                         MessageBox.Show("Thêm thành công", "THÔNG BÁO");
                         gb_vbden_file.Enabled = true;
@@ -1290,7 +1373,31 @@ namespace PhanMemQuanLiVanBan
                     string sotrang = txt_vbdi_sotrang.Text.Trim();
                     int[] _id = { svb, lvb };
                     string[] _thongtin = { sokyhieu, soDi, trichyeu, ghichu, ngky, ngky, ngduyet, sotrang,soluong,noinhan };
-                    if (bussiness.SuaVanBanDi(id,_id,_thongtin,ngbanhanh))
+                    if (sokyhieu == "")
+                    {
+                        MessageBox.Show("Hãy nhập số ký hiệu", "THÔNG BÁO");
+                    }
+                    else if (noinhan == "")
+                    {
+                        MessageBox.Show("Hãy nhập nơi nhận", "THÔNG BÁO");
+                    }
+                    else if (sotrang == "")
+                    {
+                        MessageBox.Show("Hãy nhập số trang", "THÔNG BÁO");
+                    }
+                    else if (ngduyet == "")
+                    {
+                        MessageBox.Show("Hãy nhập Tên người duyệt", "THÔNG BÁO");
+                    }
+                    else if (nggui == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người gửi", "THÔNG BÁO");
+                    }
+                    else if (ngky == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người ký", "THÔNG BÁO");
+                    }
+                    else if (bussiness.SuaVanBanDi(id,_id,_thongtin,ngbanhanh))
                     {
                         MessageBox.Show("Cập nhật thành công", "THÔNG BÁO");
                         gb_vbdi_file.Enabled = true;
@@ -1323,7 +1430,31 @@ namespace PhanMemQuanLiVanBan
                     string sotrang = txt_vbdi_sotrang.Text.Trim();
                     int[] _id = { id, svb, lvb };
                     string[] _thongtin = { sokyhieu, soDi, trichyeu, ghichu, nggui, ngky, ngduyet, sotrang,soluong,noinhan };
-                    if (bussiness.ThemVanBanDi(_id,_thongtin,ngbanhanh))
+                    if (sokyhieu == "")
+                    {
+                        MessageBox.Show("Hãy nhập số ký hiệu", "THÔNG BÁO");
+                    }
+                    else if (noinhan == "")
+                    {
+                        MessageBox.Show("Hãy nhập nơi nhận", "THÔNG BÁO");
+                    }
+                    else if (sotrang == "")
+                    {
+                        MessageBox.Show("Hãy nhập số trang", "THÔNG BÁO");
+                    }
+                    else if (ngduyet == "")
+                    {
+                        MessageBox.Show("Hãy nhập Tên người duyệt", "THÔNG BÁO");
+                    }
+                    else if (nggui == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người gửi", "THÔNG BÁO");
+                    }
+                    else if (ngky == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người ký", "THÔNG BÁO");
+                    }
+                    else if (bussiness.ThemVanBanDi(_id,_thongtin,ngbanhanh))
                     {
                         MessageBox.Show("Thêm thành công", "THÔNG BÁO");
                         gb_vbdi_file.Enabled = true;
@@ -1499,7 +1630,27 @@ namespace PhanMemQuanLiVanBan
                     string ngduyet = txt_vbnb_ngduyet.Text;
                     int[] _id = {lvb, pbh,pbn };
                     string[] _thongtin = { sokyhieu, tenvanban, trichyeu, ghichu, ngnhan, ngky, ngduyet};
-                    if (bussiness.SuaVanBanNoiBo(id,_id,_thongtin,ngbanhanh))
+                    if (tenvanban == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên văn bản", "THÔNG BÁO");
+                    }
+                    else if (sokyhieu == "")
+                        {
+                            MessageBox.Show("Hãy nhập số ký hiệu", "THÔNG BÁO");
+                        }
+                    else if (ngky == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người ký", "THÔNG BÁO");
+                    }
+                    else if (ngduyet == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người duyệt", "THÔNG BÁO");
+                    }
+                    else if (ngnhan == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người nhận", "THÔNG BÁO");
+                    }
+                    else if (bussiness.SuaVanBanNoiBo(id,_id,_thongtin,ngbanhanh))
                     {
                         MessageBox.Show("Cập nhật thành công", "THÔNG BÁO");
                         gb_vnbn_file.Enabled = true;
@@ -1532,7 +1683,27 @@ namespace PhanMemQuanLiVanBan
                     string ngduyet = txt_vbnb_ngduyet.Text;
                     int[] _id = {id,lvb, pbh,pbn };
                     string[] _thongtin = { sokyhieu, tenvanban, trichyeu, ghichu, ngnhan, ngky, ngduyet};
-                    if (bussiness.ThemVanBanNoiBo(_id,_thongtin,ngbanhanh))
+                    if (tenvanban == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên văn bản", "THÔNG BÁO");
+                    }
+                    else if (sokyhieu == "")
+                    {
+                        MessageBox.Show("Hãy nhập số ký hiệu", "THÔNG BÁO");
+                    }
+                    else if (ngky == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người ký", "THÔNG BÁO");
+                    }
+                    else if (ngduyet == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người duyệt", "THÔNG BÁO");
+                    }
+                    else if (ngnhan == "")
+                    {
+                        MessageBox.Show("Hãy nhập tên người nhận", "THÔNG BÁO");
+                    }
+                    else if (bussiness.ThemVanBanNoiBo(_id, _thongtin, ngbanhanh))
                     {
                         MessageBox.Show("Thêm thành công", "THÔNG BÁO");
                         gb_vnbn_file.Enabled = true;
@@ -1699,6 +1870,7 @@ namespace PhanMemQuanLiVanBan
         {
             if (dgv_phanquyen.DataSource!=null)
             {
+
                 if (bussiness.checkexsistQuyen(int.Parse(cbb_phanquyen_nv.SelectedValue.ToString())))
                 {
                     foreach (DataGridViewRow d in dgv_phanquyen.Rows)
@@ -1714,6 +1886,7 @@ namespace PhanMemQuanLiVanBan
                 }
                 else
                 {
+                    dgv_phanquyen.Rows[0].Cells[0].Selected = true;
                     foreach (DataGridViewRow d in dgv_phanquyen.Rows)
                     {
                         if (!bussiness.ThemQuyen(int.Parse(cbb_phanquyen_nv.SelectedValue.ToString()), int.Parse(d.Cells[0].Value.ToString()), (bool)d.Cells[2].Value))
@@ -1730,7 +1903,7 @@ namespace PhanMemQuanLiVanBan
 
         private void btn_huyquyen_Click(object sender, EventArgs e)
         {
-            if (dgv_phanquyen.DataSource != null)
+            if (dgv_phanquyen.DataSource != null && cbb_phanquyen_nv.Items.Count!=0)
             {
                 if (bussiness.checkexsistQuyen(int.Parse(cbb_phanquyen_nv.SelectedValue.ToString())))
                 {

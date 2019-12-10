@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
+
 namespace DAL
 {
     public class QLVB_database
@@ -18,7 +19,7 @@ namespace DAL
         // Nhân viên==================================================================
         public IQueryable<SALE_NHAN_VIEN> getNhanVien()
         {
-            var nhanvien=from nv in qlvb.SALE_NHAN_VIENs where nv.ID_NHAN_VIEN>0 select nv;
+            var nhanvien=from nv in qlvb.SALE_NHAN_VIENs where nv.ID_NHAN_VIEN>=0 select nv;
             return nhanvien;
         }
 
@@ -32,6 +33,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -45,6 +47,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -58,6 +61,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -67,6 +71,10 @@ namespace DAL
             return qlvb.SALE_NHAN_VIENs.Where(nv => nv.ID_NHAN_VIEN == id).FirstOrDefault();
         }
 
+        public SALE_NHAN_VIEN searchTaiKhoan(string taikhoan)
+        {
+            return qlvb.SALE_NHAN_VIENs.Where(nv => nv.MA_NHAN_VIEN == taikhoan).FirstOrDefault();
+        }
         // Thông tin công ty====================================================
         public IQueryable<THONG_TIN_CONG_TY> getNThongTinChung(int id_congty)
         {
@@ -95,6 +103,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -114,6 +123,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -133,6 +143,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -152,6 +163,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -171,6 +183,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -190,6 +203,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -220,6 +234,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -239,6 +254,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -271,6 +287,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -290,6 +307,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -338,6 +356,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -351,6 +370,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -395,6 +415,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -416,6 +437,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -442,6 +464,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -455,6 +478,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -489,6 +513,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -508,6 +533,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -534,6 +560,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -547,6 +574,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -554,15 +582,15 @@ namespace DAL
         //Phân quyền=============================================================
         public IQueryable<PhanQuyenObject> getPhanQuyen()
         {
-            var a = from mn in qlvb.MENUFORMs
-                    join gb in qlvb.GROUPMENUFUNCs on mn.MENUFORMID equals (gb.MENUFORMID) into ot
+            var a = (from gb in qlvb.GROUPMENUFUNCs
+                    join mn in qlvb.MENUFORMs on gb.MENUFORMID equals (mn.MENUFORMID) into ot
                     from otnew in ot.DefaultIfEmpty()
                     select new PhanQuyenObject
                     {
-                        id_quyen = mn.MENUFORMID,
-                        tenquyen = mn.MENUFORMNAME,
-                        truycap =otnew ==null?false:otnew.ACCESS
-                    };
+                        id_quyen = gb.MENUFORMID,
+                        tenquyen = otnew.MENUFORMNAME,
+                        truycap =otnew ==null?false:false
+                    }).Distinct();
             return a;
         }
 
@@ -581,7 +609,7 @@ namespace DAL
         }
         public bool checkExsistPQ(int id_user)
         {
-            var a = qlvb.GROUPMENUFUNCs.Select(t=>t).FirstOrDefault();
+            var a = qlvb.GROUPMENUFUNCs.Where(t=>t.ID_NHAN_VIEN==id_user).FirstOrDefault();
             if (a != null)
                 return true;
             return false;
@@ -596,6 +624,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }
@@ -609,6 +638,7 @@ namespace DAL
             }
             catch
             {
+                qlvb = new QLVBDataContext();
                 return false;
             }
         }

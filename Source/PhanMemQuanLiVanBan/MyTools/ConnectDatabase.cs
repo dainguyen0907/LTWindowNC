@@ -61,7 +61,7 @@ namespace MyTools
         private void btn_ok_Click(object sender, EventArgs e)
         {
             if (cbb_server.Text!="" && cbb_database.Text!=""   )
-                kq = "Data Source =" + cbb_server.Text + "; Initial Catalog= "+cbb_database.Text+"; User ID=" + txt_user.Text + ";pwd=" + txt_password.Text + "";
+                kq = "Data Source =" + cbb_server.Text + "; Initial Catalog="+cbb_database.Text+"; User ID=" + txt_user.Text + ";pwd=" + txt_password.Text + "";
             if (this.parent != null)
                 parent.Close();
         }

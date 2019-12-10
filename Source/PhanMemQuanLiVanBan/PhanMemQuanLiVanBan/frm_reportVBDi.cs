@@ -31,10 +31,12 @@ namespace PhanMemQuanLiVanBan
             rp.SetParameterValue("date_from", date_from);
             rp.SetParameterValue("date_to", date_to);
             string[] connect = Properties.Settings.Default.Connect.ToString().Split(';');
-            string server = connect[0].Substring(12);
-            string database = connect[1].Substring(16);
-            string user = connect[2].Substring(8);
+            string server = connect[0].Substring(13);
+            string database = connect[1].Substring(17);
+            string user = connect[2].Substring(9);
             string pass = connect[3].Substring(4);
+            rp.DataSourceConnections.Clear();
+            rp.DataSourceConnections[0].SetConnection(server, database, false);
             rp.SetDatabaseLogon(user, pass, server, database);
             crystalReportViewer1.ReportSource = rp;
             crystalReportViewer1.Refresh();

@@ -73,6 +73,16 @@ namespace BLL
             else
                 return false;
         }
+        public bool timNhanVien(string taikhoan)
+        {
+            SALE_NHAN_VIEN nhanvien = da.searchTaiKhoan(taikhoan);
+            if (nhanvien != null)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
          //Công ty======================================================
         public List<THONG_TIN_CONG_TY> getThongTinChung(int id)
         {
@@ -621,7 +631,7 @@ namespace BLL
             return da.getPhanQuyen().ToList();
             
         }
-        public bool ThemQuyen(int id_nv, int id_menu, bool access)
+             public bool ThemQuyen(int id_nv, int id_menu, bool access)
         {
             GROUPMENUFUNC mn = new GROUPMENUFUNC();
             mn.ID_NHAN_VIEN = id_nv;

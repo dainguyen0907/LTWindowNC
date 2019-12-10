@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DAL;
 namespace PhanMemQuanLiVanBan
 {
     public partial class frm_KetNoiDatabase : Form
@@ -27,7 +27,10 @@ namespace PhanMemQuanLiVanBan
             }
             else
             {
-                PhanMemQuanLiVanBan.Properties.Settings.Default.Connect = connectDatabase1.kq;
+                Properties.Settings.Default.Connect = connectDatabase1.kq;
+                Properties.Settings.Default["QUAN_LY_VAN_BANConnectionString"] = connectDatabase1.kq;
+                ConnectionString c = new ConnectionString();
+                c.setConnectionString(connectDatabase1.kq);
                 PhanMemQuanLiVanBan.Properties.Settings.Default.Save();
                 MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK);
             }
